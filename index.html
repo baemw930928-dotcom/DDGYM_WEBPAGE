@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>d_d GYM | 조용한 럭셔리 피트니스</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-error": "#ffffff",
+                      "inverse-surface": "#303031",
+                      "surface": "#fbf9f9",
+                      "primary-container": "#1c1b1b",
+                      "on-primary-fixed": "#1c1b1b",
+                      "tertiary-fixed-dim": "#c5c7c8",
+                      "surface-container-low": "#f5f3f3",
+                      "secondary-fixed-dim": "#e9c176",
+                      "on-tertiary": "#ffffff",
+                      "on-secondary": "#ffffff",
+                      "surface-container-high": "#e9e8e7",
+                      "surface-tint": "#5f5e5e",
+                      "tertiary": "#000000",
+                      "surface-container-highest": "#e4e2e2",
+                      "tertiary-fixed": "#e1e3e4",
+                      "surface-container": "#efeded",
+                      "surface-bright": "#fbf9f9",
+                      "on-tertiary-fixed-variant": "#454748",
+                      "on-tertiary-container": "#828485",
+                      "error": "#ba1a1a",
+                      "primary-fixed-dim": "#c8c6c5",
+                      "on-secondary-fixed": "#261900",
+                      "on-primary-fixed-variant": "#474746",
+                      "on-error-container": "#93000a",
+                      "on-tertiary-fixed": "#191c1d",
+                      "secondary-container": "#fed488",
+                      "tertiary-container": "#191c1d",
+                      "secondary": "#775a19",
+                      "on-surface": "#1b1c1c",
+                      "primary-fixed": "#e5e2e1",
+                      "surface-container-lowest": "#ffffff",
+                      "on-primary-container": "#858383",
+                      "background": "#fbf9f9",
+                      "on-secondary-container": "#785a1a",
+                      "on-secondary-fixed-variant": "#5d4201",
+                      "inverse-on-surface": "#f2f0f0",
+                      "outline-variant": "#c4c7c7",
+                      "primary": "#000000",
+                      "secondary-fixed": "#ffdea5",
+                      "error-container": "#ffdad6",
+                      "inverse-primary": "#c8c6c5",
+                      "surface-variant": "#e4e2e2",
+                      "on-surface-variant": "#444748",
+                      "on-primary": "#ffffff",
+                      "surface-dim": "#dbdad9",
+                      "on-background": "#1b1c1c",
+                      "outline": "#747878"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "gutter-desktop": "32px",
+                      "base": "8px",
+                      "max-width": "1280px",
+                      "margin-desktop": "64px",
+                      "margin-mobile": "24px",
+                      "gutter-mobile": "16px",
+                      "section-padding-desktop": "120px",
+                      "section-padding-mobile": "80px"
+              },
+              "fontFamily": {
+                      "display-lg": [
+                              "Bodoni Moda"
+                      ],
+                      "headline-lg-mobile": [
+                              "Bodoni Moda"
+                      ],
+                      "label-sm": [
+                              "Manrope"
+                      ],
+                      "label-md": [
+                              "Manrope"
+                      ],
+                      "headline-lg": [
+                              "Bodoni Moda"
+                      ],
+                      "body-lg": [
+                              "Manrope"
+                      ],
+                      "body-md": [
+                              "Manrope"
+                      ],
+                      "headline-md": [
+                              "Bodoni Moda"
+                      ]
+              },
+              "fontSize": {
+                      "display-lg": [
+                              "64px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg": [
+                              "40px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "28px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "500"
+                              }
+                      ]
+              }
+            },
+          }
+        }
+      </script>
+<style>
+        .material-symbols-outlined {
+          font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+        }
+      </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col selection:bg-secondary-container selection:text-on-secondary-container overflow-x-hidden">
+<!-- TopNavBar (Shared Component) -->
+<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-gutter-desktop py-base h-[80px] bg-surface/90 backdrop-blur-md border-b border-outline-variant/30">
+<div class="text-headline-md font-headline-md tracking-widest text-on-surface dark:text-on-surface">
+            d_d GYM
+        </div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-primary dark:text-primary border-b border-primary pb-1 font-label-md text-label-md" href="#why-premium">프리미엄의 이유</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors duration-300" href="#price">가격</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors duration-300" href="#reviews">후기</a>
+</div>
+<button class="hidden md:inline-flex items-center justify-center bg-secondary text-on-secondary px-6 py-3 font-label-md text-label-md tracking-wider hover:bg-secondary/90 transition-colors duration-300">
+            지금 가입하기
+        </button>
+<button class="md:hidden text-on-surface">
+<span class="material-symbols-outlined text-2xl">menu</span>
+</button>
+</nav>
+<main class="flex-grow pt-[80px]">
+<!-- Hero Section -->
+<section class="min-h-[870px] flex items-center justify-center px-gutter-mobile md:px-gutter-desktop max-w-max-width mx-auto py-section-padding-mobile md:py-section-padding-desktop">
+<div class="text-center max-w-4xl mx-auto flex flex-col items-center">
+<h1 class="font-display-lg text-display-lg text-primary mb-8 leading-tight">
+                    하루 커피 한 잔 값으로,<br/>내 몸에 평생 남는 건강을 투자하세요!
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-2xl mx-auto">
+                    d_d GYM은 프라이빗한 공간, 검증된 트레이너, 그리고 진심 어린 동기부여로 회원님의 운동 여정을 끝까지 완주하게 만드는 프리미엄 PT 전문 헬스장입니다.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 items-center justify-center">
+<button class="w-full sm:w-auto px-8 py-4 bg-secondary text-on-secondary font-label-md text-label-md tracking-wider hover:bg-secondary/90 transition-colors duration-300">
+                        2,900원부터 시작하기
+                    </button>
+<a class="font-label-md text-label-md text-primary border-b border-primary pb-1 hover:text-secondary hover:border-secondary transition-colors duration-300 mt-4 sm:mt-0" href="#price">
+                        가격 살펴보기
+                    </a>
+</div>
+</div>
+</section>
+<!-- Value Proposition (Why AETHER) -->
+<section class="py-section-padding-mobile md:py-section-padding-desktop bg-surface-container-low" id="why-premium">
+<div class="px-gutter-mobile md:px-gutter-desktop max-w-max-width mx-auto">
+<div class="text-center mb-16 md:mb-24">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4">d_d GYM의 기준</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl mx-auto">단순한 헬스장을 넘어, 회원님의 변화를 끝까지 책임지는 d_d GYM만의 세 가지 약속입니다.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+<!-- Feature 1 -->
+<div class="flex flex-col items-center text-center group">
+<div class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center mb-6 group-hover:bg-secondary-container transition-colors duration-300">
+<span class="material-symbols-outlined text-3xl text-primary group-hover:text-on-secondary-container">door_front</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-3">프라이빗한 공간</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">인원수 제한으로 집중된 트레이닝 분위기를 만듭니다. 붐비지 않는 공간에서 오롯이 나의 운동에만 몰입할 수 있습니다.</p>
+</div>
+<!-- Feature 2 -->
+<div class="flex flex-col items-center text-center group">
+<div class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center mb-6 group-hover:bg-secondary-container transition-colors duration-300">
+<span class="material-symbols-outlined text-3xl text-primary group-hover:text-on-secondary-container">verified</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-3">검증된 트레이너</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">물리치료사 면허 보유, 전 국가대표 선수 트레이너 등 검증된 전문가들이 안전하고 체계적인 트레이닝을 제공합니다.</p>
+</div>
+<!-- Feature 3 -->
+<div class="flex flex-col items-center text-center group">
+<div class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center mb-6 group-hover:bg-secondary-container transition-colors duration-300">
+<span class="material-symbols-outlined text-3xl text-primary group-hover:text-on-secondary-container">favorite</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-3">의지박약도 완주하게 만드는 심리적 동기부여</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">단순히 숫자만 세어주는 로봇 같은 트레이너가 아닙니다. 매 수업 회원님의 컨디션과 멘탈 상태를 세심하게 체크하고, 운동이 삶의 즐거운 습관이 될 때까지 진심을 다해 소통하고 이끌어 드립니다.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Pricing Focus -->
+<section class="py-section-padding-mobile md:py-section-padding-desktop" id="price">
+<div class="px-gutter-mobile md:px-gutter-desktop max-w-max-width mx-auto">
+<div class="text-center mb-16 md:mb-24 max-w-3xl mx-auto">
+<span class="font-label-md text-label-md tracking-[0.2em] text-secondary mb-4 block">투명한 가격</span>
+<h2 class="font-display-lg text-display-lg text-primary mb-6 leading-tight">하루 커피 한 잔.<br/>그리고 내 몸을 위한 투자.</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">목표와 라이프스타일에 맞는 멤버십을 선택하세요. 모든 플랜은 부가세(VAT)가 포함된 가격입니다.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+<!-- BASIC -->
+<div class="bg-surface p-8 md:p-10 border border-outline-variant/30 relative flex flex-col">
+<div class="mb-6">
+<p class="font-label-md text-label-md text-on-surface-variant tracking-[0.2em] mb-2">BASIC · 베이직</p>
+<p class="font-body-md text-body-md text-on-surface-variant italic">프라이빗 공간에서의 독립적인 운동</p>
+</div>
+<div class="mb-6 border-b border-outline-variant/30 pb-6">
+<div class="flex items-baseline gap-2">
+<span class="font-display-lg text-display-lg text-primary">2,900</span>
+<span class="font-body-md text-body-md text-on-surface-variant">원 / 일</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-2">일일 환산 가격 · VAT 포함</p>
+</div>
+<div class="mb-6">
+<p class="font-label-sm text-label-sm tracking-wider text-on-surface-variant mb-2">추천 대상</p>
+<p class="font-body-md text-body-md text-on-surface">어느 정도 운동 기구 사용법을 알지만, 붐비는 헬스장이 싫고 프리미엄 시설을 누리고 싶은 분</p>
+</div>
+<ul class="space-y-4 mb-10 flex-grow">
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary mt-1">check</span>
+<span class="font-body-md text-body-md text-on-surface">1회 1:1 PT</span>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary mt-1">check</span>
+<span class="font-body-md text-body-md text-on-surface">3개월 회원권</span>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary mt-1">check</span>
+<span class="font-body-md text-body-md text-on-surface">부가세(VAT) 포함</span>
+</li>
+</ul>
+<button class="w-full px-8 py-4 bg-surface text-primary border border-primary font-label-md text-label-md tracking-wider hover:bg-primary hover:text-on-primary transition-colors duration-300">
+                            베이직 시작하기
+                        </button>
+</div>
+<!-- STANDARD (BEST) -->
+<div class="bg-primary p-8 md:p-10 relative flex flex-col md:-mt-6 md:mb-0 shadow-2xl">
+<div class="absolute top-0 left-0 right-0 bg-secondary text-on-secondary text-center py-2 font-label-md text-label-md tracking-[0.2em]">
+                            👑 BEST
+                        </div>
+<div class="mt-8 mb-6">
+<p class="font-label-md text-label-md text-secondary-fixed-dim tracking-[0.2em] mb-2">STANDARD · 스탠다드</p>
+<p class="font-body-md text-body-md text-on-primary/70 italic">d_d GYM의 시그니처 1:1 케어</p>
+</div>
+<div class="mb-6 border-b border-on-primary/20 pb-6">
+<div class="flex items-baseline gap-2">
+<span class="font-display-lg text-display-lg text-on-primary">4,900</span>
+<span class="font-body-md text-body-md text-on-primary/70">원 / 일</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-primary/60 mt-2">일일 환산 가격 · VAT 포함</p>
+</div>
+<div class="mb-6">
+<p class="font-label-sm text-label-sm tracking-wider text-on-primary/60 mb-2">추천 대상</p>
+<p class="font-body-md text-body-md text-on-primary">전문가의 체계적인 티칭을 통해 확실한 체형 변화와 올바른 운동 습관을 만들고 싶은 분</p>
+</div>
+<ul class="space-y-4 mb-10 flex-grow">
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary mt-1">check</span>
+<span class="font-body-md text-body-md text-on-primary">10회 1:1 PT</span>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary mt-1">check</span>
+<span class="font-body-md text-body-md text-on-primary">6개월 회원권</span>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary mt-1">check</span>
+<span class="font-body-md text-body-md text-on-primary">개인 라커 무료 제공</span>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary mt-1">check</span>
+<span class="font-body-md text-body-md text-on-primary">부가세(VAT) 포함</span>
+</li>
+</ul>
+<button class="w-full px-8 py-4 bg-secondary text-on-secondary font-label-md text-label-md tracking-wider hover:bg-secondary/90 transition-colors duration-300">
+                            스탠다드 선택하기
+                        </button>
+</div>
+<!-- PRO -->
+<div class="bg-surface p-8 md:p-10 border border-outline-variant/30 relative flex flex-col">
+<div class="mb-6">
+<p class="font-label-md text-label-md text-on-surface-variant tracking-[0.2em] mb-2">PRO · 프로</p>
+<p class="font-body-md text-body-md text-on-surface-variant italic">확실한 목표 달성을 위한 VIP 페이스메이커</p>
+</div>
+<div class="mb-6 border-b border-outline-variant/30 pb-6">
+<div class="flex items-baseline gap-2">
+<span class="font-display-lg text-display-lg text-primary">9,900</span>
+<span class="font-body-md text-body-md text-on-surface-variant">원 / 일</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-2">일일 환산 가격 · VAT 포함</p>
+</div>
+<div class="mb-6">
+<p class="font-label-sm text-label-sm tracking-wider text-on-surface-variant mb-2">추천 대상</p>
+<p class="font-body-md text-body-md text-on-surface">바디프로필, 웨딩 준비, 장기간 체중조절 등 확실한 목표가 있는 분</p>
+</div>
+<ul class="space-y-4 mb-10 flex-grow">
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary mt-1">check</span>
+<span class="font-body-md text-body-md text-on-surface">40회 1:1 PT</span>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary mt-1">check</span>
+<span class="font-body-md text-body-md text-on-surface">9개월 회원권</span>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary mt-1">check</span>
+<span class="font-body-md text-body-md text-on-surface">개인 라커 무료 제공</span>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary mt-1">check</span>
+<span class="font-body-md text-body-md text-on-surface">부가세(VAT) 포함</span>
+</li>
+</ul>
+<button class="w-full px-8 py-4 bg-surface text-primary border border-primary font-label-md text-label-md tracking-wider hover:bg-primary hover:text-on-primary transition-colors duration-300">
+                            프로로 시작하기
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust / Reviews -->
+<section class="py-section-padding-mobile md:py-section-padding-desktop bg-surface-container-highest" id="reviews">
+<div class="px-gutter-mobile md:px-gutter-desktop max-w-max-width mx-auto text-center">
+<span class="material-symbols-outlined text-4xl text-secondary mb-8">format_quote</span>
+<div class="max-w-3xl mx-auto">
+<h2 class="font-display-lg text-display-lg text-primary mb-12 italic leading-tight">
+                        "d_d GYM은 단순한 헬스장이 아니라, 제 일상의 리듬을 다시 맞춰준 공간이에요. 환경이 집중을 만들고, 그 안에서 진정한 평온을 얻습니다."
+                    </h2>
+<div class="flex items-center justify-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-variant overflow-hidden">
+<img alt="회원 초상" class="w-full h-full object-cover grayscale" data-alt="A black and white, high-contrast portrait of a sophisticated man in his late 30s. The lighting is editorial and moody, highlighting the contours of his face against a clean, minimalist background. The aesthetic aligns with a luxury lifestyle brand, projecting confidence, calm, and premium quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvCHuaX_9BrV8QltLjXJenzCJu4_YBmCJ-fzD6ldVjF0Vn15om6hnL1UwFT99Guc46LO13ZPQg0Pwofg1BioWuYwd6JCJuDp-r0PxyIDyLVZProdBaYQB9GMdvAoTJNJN4hPUyWWPuK3qIRcS2Q_c8lNzBwQBbiQzvwVQDDTueeufd2y6zWWXDvKmm5hRBqI0jBqo9r4qI4s5QHze8stkDcSP0FMF_sT01OfR8hbWFW_C0AdefKJK4J8OwD33DHUdGF9wQkhHR2RM"/>
+</div>
+<div class="text-left">
+<p class="font-label-md text-label-md text-primary">김 준 회원</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">2023년부터 함께한 멤버</p>
+</div>
+</div>
+</div>
+<!-- Minimalist pagination dots -->
+<div class="flex justify-center gap-2 mt-12">
+<button aria-label="후기 1" class="w-2 h-2 rounded-full bg-primary"></button>
+<button aria-label="후기 2" class="w-2 h-2 rounded-full bg-outline-variant hover:bg-outline transition-colors"></button>
+<button aria-label="후기 3" class="w-2 h-2 rounded-full bg-outline-variant hover:bg-outline transition-colors"></button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="w-full py-section-padding-desktop px-gutter-desktop flex flex-col md:flex-row justify-between items-start max-w-max-width mx-auto bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant/20">
+<div class="mb-8 md:mb-0">
+<div class="text-headline-md font-headline-md text-on-surface mb-4">d_d GYM</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs">미니멀한 디자인과 엘리트 기준으로 피트니스의 경험을 끌어올립니다.</p>
+</div>
+<div class="flex flex-col md:items-end">
+<div class="flex flex-wrap gap-6 md:justify-end mb-8">
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-opacity duration-300 opacity-80 hover:opacity-100" href="#">개인정보처리방침</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-opacity duration-300 opacity-80 hover:opacity-100" href="#">이용약관</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-opacity duration-300 opacity-80 hover:opacity-100" href="#">회원 포털</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-opacity duration-300 opacity-80 hover:opacity-100" href="#">문의하기</a>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant opacity-60 text-xs tracking-wider">
+                © 2024 d_d GYM PRIVATE CLUB. ALL RIGHTS RESERVED.
+            </p>
+</div>
+</footer>
+</body></html>
