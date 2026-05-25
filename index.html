@@ -291,10 +291,11 @@
 <a class="text-primary dark:text-primary border-b border-primary pb-1 font-label-md text-label-md" href="#why-premium">프리미엄의 이유</a>
 <a class="text-on-surface-variant dark:text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors duration-300" href="#price">가격</a>
 <a class="text-on-surface-variant dark:text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors duration-300" href="#reviews">후기</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors duration-300" href="#contact">상담 신청</a>
 </div>
-<button class="hidden md:inline-flex items-center justify-center bg-secondary text-on-secondary px-6 py-3 font-label-md text-label-md tracking-wider hover:bg-secondary/90 transition-colors duration-300">
+<a href="#contact" class="hidden md:inline-flex items-center justify-center bg-secondary text-on-secondary px-6 py-3 font-label-md text-label-md tracking-wider hover:bg-secondary/90 transition-colors duration-300">
             지금 가입하기
-        </button>
+        </a>
 <button id="mobile-menu-toggle" class="md:hidden text-on-surface" aria-label="메뉴 열기/닫기" aria-expanded="false" aria-controls="mobile-menu">
 <span id="mobile-menu-icon" class="material-symbols-outlined text-2xl">menu</span>
 </button>
@@ -305,9 +306,10 @@
 <a class="text-primary font-label-md text-label-md py-2" href="#why-premium">프리미엄의 이유</a>
 <a class="text-on-surface-variant font-label-md text-label-md py-2 hover:text-primary transition-colors duration-300" href="#price">가격</a>
 <a class="text-on-surface-variant font-label-md text-label-md py-2 hover:text-primary transition-colors duration-300" href="#reviews">후기</a>
-<button class="mt-2 inline-flex items-center justify-center bg-secondary text-on-secondary px-6 py-3 font-label-md text-label-md tracking-wider hover:bg-secondary/90 transition-colors duration-300">
+<a class="text-on-surface-variant font-label-md text-label-md py-2 hover:text-primary transition-colors duration-300" href="#contact">상담 신청</a>
+<a href="#contact" class="mt-2 inline-flex items-center justify-center bg-secondary text-on-secondary px-6 py-3 font-label-md text-label-md tracking-wider hover:bg-secondary/90 transition-colors duration-300">
             지금 가입하기
-        </button>
+        </a>
 </div>
 </div>
 </nav>
@@ -348,9 +350,9 @@
                     <span class="font-bold" style="color:#FF6B00;">d_d GYM</span>은 프라이빗한 공간, 검증된 트레이너, 그리고 진심 어린 동기부여로 회원님의 운동 여정을 끝까지 완주하게 만드는 프리미엄 PT 전문 헬스장입니다.
                 </p>
 <div class="flex flex-col sm:flex-row gap-4 items-center justify-center">
-<button class="w-full sm:w-auto px-8 py-4 bg-secondary text-on-secondary font-label-md text-label-md tracking-wider hover:bg-secondary/90 transition-colors duration-300">
+<a href="#contact" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-secondary text-on-secondary font-label-md text-label-md tracking-wider hover:bg-secondary/90 transition-colors duration-300">
                         2,900원부터 시작하기
-                    </button>
+                    </a>
 <a class="font-label-md text-label-md text-primary border-b border-primary pb-1 hover:text-secondary hover:border-secondary transition-colors duration-300 mt-4 sm:mt-0" href="#price">
                         가격 살펴보기
                     </a>
@@ -551,6 +553,51 @@
 </div>
 </div>
 </section>
+<!-- Contact / Consultation Form -->
+<section class="py-section-padding-mobile md:py-section-padding-desktop bg-surface" id="contact">
+<div class="px-gutter-mobile md:px-gutter-desktop max-w-max-width mx-auto">
+<div class="max-w-2xl mx-auto">
+<div class="text-center mb-12">
+<span class="font-label-md text-label-md tracking-[0.2em] text-secondary mb-4 block">무료 상담</span>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4">지금 바로 상담 신청하세요</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">남겨주신 연락처로 빠르게 회신드립니다.</p>
+</div>
+<form id="contact-form" action="https://formspree.io/f/xwvznzez" method="POST" class="flex flex-col gap-6" novalidate>
+<input type="hidden" name="_subject" value="디디짐 홈페이지 상담 신청"/>
+<div class="flex flex-col gap-2">
+<label for="name" class="font-label-md text-label-md text-primary">이름 <span class="text-error">*</span></label>
+<input type="text" id="name" name="name" required data-fs-field autocomplete="name" class="px-4 py-3 bg-surface border border-outline-variant text-on-surface focus:outline-none focus:border-primary transition-colors"/>
+<span data-fs-error="name" class="font-label-sm text-label-sm text-error"></span>
+</div>
+<div class="flex flex-col gap-2">
+<label for="phone" class="font-label-md text-label-md text-primary">연락처 <span class="text-error">*</span></label>
+<input type="tel" id="phone" name="phone" required data-fs-field autocomplete="tel" placeholder="010-0000-0000" class="px-4 py-3 bg-surface border border-outline-variant text-on-surface focus:outline-none focus:border-primary transition-colors"/>
+<span data-fs-error="phone" class="font-label-sm text-label-sm text-error"></span>
+</div>
+<div class="flex flex-col gap-2">
+<label for="message" class="font-label-md text-label-md text-primary">문의 내용 (선택)</label>
+<textarea id="message" name="message" rows="4" data-fs-field placeholder="궁금한 점이나 운동 목표를 알려주세요." class="px-4 py-3 bg-surface border border-outline-variant text-on-surface focus:outline-none focus:border-primary transition-colors resize-none"></textarea>
+<span data-fs-error="message" class="font-label-sm text-label-sm text-error"></span>
+</div>
+<label class="flex items-start gap-3 cursor-pointer">
+<input type="checkbox" id="consent" name="consent" required value="동의함" class="mt-1 w-5 h-5 accent-secondary"/>
+<span class="font-body-md text-body-md text-on-surface-variant">
+<button type="button" data-modal-open="privacy-modal" class="underline hover:text-primary">개인정보처리방침</button>에 동의합니다. (필수)
+</span>
+</label>
+<div data-fs-success hidden class="bg-secondary-container text-on-secondary-container px-4 py-3 font-body-md text-body-md">
+신청이 정상적으로 접수되었습니다. 빠른 시일 내에 연락드리겠습니다.
+</div>
+<div data-fs-error hidden class="bg-error-container text-on-error-container px-4 py-3 font-body-md text-body-md">
+전송에 실패했습니다. 잠시 후 다시 시도해 주세요.
+</div>
+<button type="submit" data-fs-submit-btn class="px-8 py-4 bg-secondary text-on-secondary font-label-md text-label-md tracking-wider hover:bg-secondary/90 transition-colors duration-300 disabled:opacity-60 disabled:cursor-not-allowed">
+상담 신청하기
+</button>
+</form>
+</div>
+</div>
+</section>
 </main>
 <!-- Footer (Shared Component) -->
 <footer class="w-full py-section-padding-desktop px-gutter-desktop flex flex-col md:flex-row justify-between items-start max-w-max-width mx-auto bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant/20">
@@ -563,7 +610,7 @@
 <button type="button" data-modal-open="privacy-modal" class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-opacity duration-300 opacity-80 hover:opacity-100 cursor-pointer">개인정보처리방침</button>
 <button type="button" data-modal-open="terms-modal" class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-opacity duration-300 opacity-80 hover:opacity-100 cursor-pointer">이용약관</button>
 <a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-opacity duration-300 opacity-80 hover:opacity-100" href="#">회원 포털</a>
-<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-opacity duration-300 opacity-80 hover:opacity-100" href="#">문의하기</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-opacity duration-300 opacity-80 hover:opacity-100" href="http://talk.naver.com/W5IO7N" target="_blank" rel="noopener noreferrer">문의하기</a>
 </div>
 <p class="font-body-md text-body-md text-on-surface-variant opacity-60 text-xs tracking-wider">
                 © 2024 <span class="font-bold" style="color:#FF6B00;">d_d GYM</span> PRIVATE CLUB. ALL RIGHTS RESERVED.
@@ -703,4 +750,10 @@
     });
 })();
 </script>
+<!-- Formspree Ajax SDK -->
+<script>
+  window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+  formspree('initForm', { formElement: '#contact-form', formId: 'xwvznzez' });
+</script>
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 </body></html>
