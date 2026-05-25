@@ -186,8 +186,9 @@
 </head>
 <body class="antialiased min-h-screen flex flex-col selection:bg-secondary-container selection:text-on-secondary-container overflow-x-hidden">
 <!-- TopNavBar (Shared Component) -->
-<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-gutter-desktop py-base h-[80px] bg-surface/90 backdrop-blur-md border-b border-outline-variant/30">
-<div class="text-headline-md font-headline-md tracking-widest text-on-surface dark:text-on-surface">
+<nav class="fixed top-0 left-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/30">
+<div class="flex justify-between items-center px-gutter-desktop py-base h-[80px]">
+<div class="text-headline-md font-headline-md font-bold tracking-widest" style="color:#FF6B00;">
             d_d GYM
         </div>
 <div class="hidden md:flex gap-8 items-center">
@@ -198,10 +199,48 @@
 <button class="hidden md:inline-flex items-center justify-center bg-secondary text-on-secondary px-6 py-3 font-label-md text-label-md tracking-wider hover:bg-secondary/90 transition-colors duration-300">
             지금 가입하기
         </button>
-<button class="md:hidden text-on-surface">
-<span class="material-symbols-outlined text-2xl">menu</span>
+<button id="mobile-menu-toggle" class="md:hidden text-on-surface" aria-label="메뉴 열기/닫기" aria-expanded="false" aria-controls="mobile-menu">
+<span id="mobile-menu-icon" class="material-symbols-outlined text-2xl">menu</span>
 </button>
+</div>
+<!-- Mobile menu -->
+<div id="mobile-menu" class="hidden md:hidden border-t border-outline-variant/30 bg-surface/95 backdrop-blur-md">
+<div class="flex flex-col px-gutter-mobile py-4 gap-4">
+<a class="text-primary font-label-md text-label-md py-2" href="#why-premium">프리미엄의 이유</a>
+<a class="text-on-surface-variant font-label-md text-label-md py-2 hover:text-primary transition-colors duration-300" href="#price">가격</a>
+<a class="text-on-surface-variant font-label-md text-label-md py-2 hover:text-primary transition-colors duration-300" href="#reviews">후기</a>
+<button class="mt-2 inline-flex items-center justify-center bg-secondary text-on-secondary px-6 py-3 font-label-md text-label-md tracking-wider hover:bg-secondary/90 transition-colors duration-300">
+            지금 가입하기
+        </button>
+</div>
+</div>
 </nav>
+<script>
+(function () {
+    const toggle = document.getElementById('mobile-menu-toggle');
+    const menu = document.getElementById('mobile-menu');
+    const icon = document.getElementById('mobile-menu-icon');
+    if (!toggle || !menu || !icon) return;
+
+    function closeMenu() {
+        menu.classList.add('hidden');
+        toggle.setAttribute('aria-expanded', 'false');
+        icon.textContent = 'menu';
+    }
+    function openMenu() {
+        menu.classList.remove('hidden');
+        toggle.setAttribute('aria-expanded', 'true');
+        icon.textContent = 'close';
+    }
+    toggle.addEventListener('click', function () {
+        if (menu.classList.contains('hidden')) openMenu();
+        else closeMenu();
+    });
+    menu.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', closeMenu);
+    });
+})();
+</script>
 <main class="flex-grow pt-[80px]">
 <!-- Hero Section -->
 <section class="min-h-[870px] flex items-center justify-center px-gutter-mobile md:px-gutter-desktop max-w-max-width mx-auto py-section-padding-mobile md:py-section-padding-desktop">
@@ -210,7 +249,7 @@
                     하루 커피 한 잔 값으로,<br/>내 몸에 평생 남는 건강을 투자하세요!
                 </h1>
 <p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-2xl mx-auto">
-                    d_d GYM은 프라이빗한 공간, 검증된 트레이너, 그리고 진심 어린 동기부여로 회원님의 운동 여정을 끝까지 완주하게 만드는 프리미엄 PT 전문 헬스장입니다.
+                    <span class="font-bold" style="color:#FF6B00;">d_d GYM</span>은 프라이빗한 공간, 검증된 트레이너, 그리고 진심 어린 동기부여로 회원님의 운동 여정을 끝까지 완주하게 만드는 프리미엄 PT 전문 헬스장입니다.
                 </p>
 <div class="flex flex-col sm:flex-row gap-4 items-center justify-center">
 <button class="w-full sm:w-auto px-8 py-4 bg-secondary text-on-secondary font-label-md text-label-md tracking-wider hover:bg-secondary/90 transition-colors duration-300">
@@ -226,8 +265,8 @@
 <section class="py-section-padding-mobile md:py-section-padding-desktop bg-surface-container-low" id="why-premium">
 <div class="px-gutter-mobile md:px-gutter-desktop max-w-max-width mx-auto">
 <div class="text-center mb-16 md:mb-24">
-<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4">d_d GYM의 기준</h2>
-<p class="font-body-md text-body-md text-on-surface-variant max-w-xl mx-auto">단순한 헬스장을 넘어, 회원님의 변화를 끝까지 책임지는 d_d GYM만의 세 가지 약속입니다.</p>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4"><span class="font-bold" style="color:#FF6B00;">d_d GYM</span>의 기준</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl mx-auto">단순한 헬스장을 넘어, 회원님의 변화를 끝까지 책임지는 <span class="font-bold" style="color:#FF6B00;">d_d GYM</span>만의 세 가지 약속입니다.</p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
 <!-- Feature 1 -->
@@ -241,18 +280,18 @@
 <!-- Feature 2 -->
 <div class="flex flex-col items-center text-center group">
 <div class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center mb-6 group-hover:bg-secondary-container transition-colors duration-300">
-<span class="material-symbols-outlined text-3xl text-primary group-hover:text-on-secondary-container">verified</span>
-</div>
-<h3 class="font-headline-md text-headline-md text-primary mb-3">검증된 트레이너</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">물리치료사 면허 보유, 전 국가대표 선수 트레이너 등 검증된 전문가들이 안전하고 체계적인 트레이닝을 제공합니다.</p>
-</div>
-<!-- Feature 3 -->
-<div class="flex flex-col items-center text-center group">
-<div class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center mb-6 group-hover:bg-secondary-container transition-colors duration-300">
 <span class="material-symbols-outlined text-3xl text-primary group-hover:text-on-secondary-container">favorite</span>
 </div>
 <h3 class="font-headline-md text-headline-md text-primary mb-3">의지박약도 완주하게 만드는 심리적 동기부여</h3>
 <p class="font-body-md text-body-md text-on-surface-variant">단순히 숫자만 세어주는 로봇 같은 트레이너가 아닙니다. 매 수업 회원님의 컨디션과 멘탈 상태를 세심하게 체크하고, 운동이 삶의 즐거운 습관이 될 때까지 진심을 다해 소통하고 이끌어 드립니다.</p>
+</div>
+<!-- Feature 3 -->
+<div class="flex flex-col items-center text-center group">
+<div class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center mb-6 group-hover:bg-secondary-container transition-colors duration-300">
+<span class="material-symbols-outlined text-3xl text-primary group-hover:text-on-secondary-container">verified</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-3">검증된 트레이너</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">물리치료사 면허 보유, 전 국가대표 선수 트레이너 등 검증된 전문가들이 안전하고 체계적인 트레이닝을 제공합니다.</p>
 </div>
 </div>
 </div>
@@ -308,7 +347,7 @@
                         </div>
 <div class="mt-8 mb-6">
 <p class="font-label-md text-label-md text-secondary-fixed-dim tracking-[0.2em] mb-2">STANDARD · 스탠다드</p>
-<p class="font-body-md text-body-md text-on-primary/70 italic">d_d GYM의 시그니처 1:1 케어</p>
+<p class="font-body-md text-body-md text-on-primary/70 italic"><span class="font-bold" style="color:#FF6B00;">d_d GYM</span>의 시그니처 1:1 케어</p>
 </div>
 <div class="mb-6 border-b border-on-primary/20 pb-6">
 <div class="flex items-baseline gap-2">
@@ -387,27 +426,32 @@
 </section>
 <!-- Trust / Reviews -->
 <section class="py-section-padding-mobile md:py-section-padding-desktop bg-surface-container-highest" id="reviews">
-<div class="px-gutter-mobile md:px-gutter-desktop max-w-max-width mx-auto text-center">
-<span class="material-symbols-outlined text-4xl text-secondary mb-8">format_quote</span>
-<div class="max-w-3xl mx-auto">
-<h2 class="font-display-lg text-display-lg text-primary mb-12 italic leading-tight">
-                        "d_d GYM은 단순한 헬스장이 아니라, 제 일상의 리듬을 다시 맞춰준 공간이에요. 환경이 집중을 만들고, 그 안에서 진정한 평온을 얻습니다."
-                    </h2>
-<div class="flex items-center justify-center gap-4">
-<div class="w-12 h-12 rounded-full bg-surface-variant overflow-hidden">
-<img alt="회원 초상" class="w-full h-full object-cover grayscale" data-alt="A black and white, high-contrast portrait of a sophisticated man in his late 30s. The lighting is editorial and moody, highlighting the contours of his face against a clean, minimalist background. The aesthetic aligns with a luxury lifestyle brand, projecting confidence, calm, and premium quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvCHuaX_9BrV8QltLjXJenzCJu4_YBmCJ-fzD6ldVjF0Vn15om6hnL1UwFT99Guc46LO13ZPQg0Pwofg1BioWuYwd6JCJuDp-r0PxyIDyLVZProdBaYQB9GMdvAoTJNJN4hPUyWWPuK3qIRcS2Q_c8lNzBwQBbiQzvwVQDDTueeufd2y6zWWXDvKmm5hRBqI0jBqo9r4qI4s5QHze8stkDcSP0FMF_sT01OfR8hbWFW_C0AdefKJK4J8OwD33DHUdGF9wQkhHR2RM"/>
+<div class="px-gutter-mobile md:px-gutter-desktop max-w-max-width mx-auto">
+<div class="text-center mb-16">
+<span class="material-symbols-outlined text-4xl text-secondary mb-4">format_quote</span>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary">회원 후기</h2>
 </div>
-<div class="text-left">
-<p class="font-label-md text-label-md text-primary">김 준 회원</p>
-<p class="font-label-sm text-label-sm text-on-surface-variant">2023년부터 함께한 멤버</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+<!-- Review 1 -->
+<div class="bg-surface p-8 md:p-10 border border-outline-variant/30 flex flex-col">
+<p class="font-body-md text-body-md text-on-surface leading-relaxed mb-8 flex-grow">
+                        "제가 여기저기 피티를 받아봤는데 사전에 개개인의 컨디션 체크해주시면서 체계적으로 운동 스케줄 짜주시고 이렇게 꼼꼼하게 자세 봐주시는건 처음인거 같아 디디짐으로 정착하게 되었어요-! 어느부분의 근육을 사용해야하는지 정확하게 잡아주셔서 어떻게 내 몸을 움직여야하는지 쉽게 이해한거 같아요!! 덕분에 운동에 재미를 쉽게 붙여서 점점 달라지는 제 몸이 기대가 됩니당. 대표님 선생님들 정말 친절하셔서 부담없이 물어볼수 있는것도 너무 좋았던거같아요ㅎㅎ 정말 운동맛집 디디짐 최고에요 앞으로도 잘부탁드립니다-! 의정부 주민분들 고민말고 진짜 한번만 받아보세요."
+                    </p>
+<div class="flex items-center justify-between border-t border-outline-variant/30 pt-4">
+<p class="font-label-md text-label-md text-primary">엉엉2</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">26.03.25.수</p>
 </div>
 </div>
+<!-- Review 2 -->
+<div class="bg-surface p-8 md:p-10 border border-outline-variant/30 flex flex-col">
+<p class="font-body-md text-body-md text-on-surface leading-relaxed mb-8 flex-grow">
+                        "상담도 친절하게 잘해주시구 필요한 운동법만 전문적으로 쏙쏙 알려주십니다 강추!! 감사합니다 선생님:)"
+                    </p>
+<div class="flex items-center justify-between border-t border-outline-variant/30 pt-4">
+<p class="font-label-md text-label-md text-primary">두비두바95</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">26.05.07.목</p>
 </div>
-<!-- Minimalist pagination dots -->
-<div class="flex justify-center gap-2 mt-12">
-<button aria-label="후기 1" class="w-2 h-2 rounded-full bg-primary"></button>
-<button aria-label="후기 2" class="w-2 h-2 rounded-full bg-outline-variant hover:bg-outline transition-colors"></button>
-<button aria-label="후기 3" class="w-2 h-2 rounded-full bg-outline-variant hover:bg-outline transition-colors"></button>
+</div>
 </div>
 </div>
 </section>
@@ -415,8 +459,8 @@
 <!-- Footer (Shared Component) -->
 <footer class="w-full py-section-padding-desktop px-gutter-desktop flex flex-col md:flex-row justify-between items-start max-w-max-width mx-auto bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant/20">
 <div class="mb-8 md:mb-0">
-<div class="text-headline-md font-headline-md text-on-surface mb-4">d_d GYM</div>
-<p class="font-body-md text-body-md text-on-surface-variant max-w-xs">미니멀한 디자인과 엘리트 기준으로 피트니스의 경험을 끌어올립니다.</p>
+<div class="text-headline-md font-headline-md font-bold mb-4" style="color:#FF6B00;">d_d GYM</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs">의정부시 의정로84, 대성빌딩 지하1층</p>
 </div>
 <div class="flex flex-col md:items-end">
 <div class="flex flex-wrap gap-6 md:justify-end mb-8">
@@ -426,7 +470,7 @@
 <a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-opacity duration-300 opacity-80 hover:opacity-100" href="#">문의하기</a>
 </div>
 <p class="font-body-md text-body-md text-on-surface-variant opacity-60 text-xs tracking-wider">
-                © 2024 d_d GYM PRIVATE CLUB. ALL RIGHTS RESERVED.
+                © 2024 <span class="font-bold" style="color:#FF6B00;">d_d GYM</span> PRIVATE CLUB. ALL RIGHTS RESERVED.
             </p>
 </div>
 </footer>
