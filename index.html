@@ -4,6 +4,12 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 
+<!-- Security: prefer HTTP headers when the host allows; meta is best-effort -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://www.clarity.ms https://*.clarity.ms https://www.googletagmanager.com https://www.google-analytics.com https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com https://www.clarity.ms https://*.clarity.ms https://c.bing.com; connect-src 'self' https://formspree.io https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://*.clarity.ms https://c.bing.com; form-action https://formspree.io; frame-ancestors 'none'; base-uri 'self'; upgrade-insecure-requests"/>
+<meta http-equiv="X-Content-Type-Options" content="nosniff"/>
+<meta name="referrer" content="strict-origin-when-cross-origin"/>
+<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()"/>
+
 <!-- Primary SEO -->
 <title>디디짐 | 의정부 퍼스널트레이닝 전문 헬스장</title>
 <meta name="description" content="의정부 대성빌딩 지하1층 디디짐. 검증된 트레이너의 1:1 퍼스널트레이닝으로 체계적인 운동 스케줄과 맞춤 자세 교정을 경험하세요."/>
@@ -83,9 +89,10 @@
 }
 </script>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet" crossorigin="anonymous"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" crossorigin="anonymous"/>
 <script id="tailwind-config">
         tailwind.config = {
           darkMode: "class",
@@ -281,7 +288,7 @@
 </script>
 </head>
 <body class="antialiased min-h-screen flex flex-col selection:bg-secondary-container selection:text-on-secondary-container overflow-x-hidden">
-<!-- TopNavBar (Shared Component) -->
+<!-- Top Navigation -->
 <nav class="fixed top-0 left-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/30">
 <div class="flex justify-between items-center px-gutter-desktop py-base h-[80px]">
 <div class="text-headline-md font-headline-md font-bold tracking-widest" style="color:#FF6B00;">
@@ -359,7 +366,7 @@
 </div>
 </div>
 </section>
-<!-- Value Proposition (Why AETHER) -->
+<!-- Value Proposition -->
 <section class="py-section-padding-mobile md:py-section-padding-desktop bg-surface-container-low" id="why-premium">
 <div class="px-gutter-mobile md:px-gutter-desktop max-w-max-width mx-auto">
 <div class="text-center mb-16 md:mb-24">
@@ -599,7 +606,7 @@
 </div>
 </section>
 </main>
-<!-- Footer (Shared Component) -->
+<!-- Footer -->
 <footer class="w-full py-section-padding-desktop px-gutter-desktop flex flex-col md:flex-row justify-between items-start max-w-max-width mx-auto bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant/20">
 <div class="mb-8 md:mb-0">
 <div class="text-headline-md font-headline-md font-bold mb-4" style="color:#FF6B00;">d_d GYM</div>
@@ -755,5 +762,5 @@
   window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
   formspree('initForm', { formElement: '#contact-form', formId: 'xwvznzez' });
 </script>
-<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+<script src="https://unpkg.com/@formspree/ajax@1" defer crossorigin="anonymous"></script>
 </body></html>
