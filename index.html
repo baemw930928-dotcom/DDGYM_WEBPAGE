@@ -17,6 +17,8 @@
 <meta name="author" content="d_d GYM"/>
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large"/>
 <link rel="canonical" href="https://d-dgym.com/"/>
+<link rel="alternate" hreflang="ko" href="https://d-dgym.com/"/>
+<link rel="alternate" hreflang="x-default" href="https://d-dgym.com/"/>
 
 <!-- Favicon -->
 <link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
@@ -32,6 +34,7 @@
 <meta property="og:image" content="https://d-dgym.com/og-image.jpg"/>
 <meta property="og:image:width" content="2048"/>
 <meta property="og:image:height" content="2048"/>
+<meta property="og:image:alt" content="디디짐 d_d GYM - 의정부 1:1 퍼스널트레이닝 전문 헬스장"/>
 <meta property="og:locale" content="ko_KR"/>
 
 <!-- Twitter Card -->
@@ -39,6 +42,7 @@
 <meta name="twitter:title" content="디디짐 | 의정부 퍼스널트레이닝 전문 헬스장"/>
 <meta name="twitter:description" content="의정부 대성빌딩 지하1층 디디짐. 검증된 트레이너의 1:1 퍼스널트레이닝으로 체계적인 운동 스케줄과 맞춤 자세 교정을 경험하세요."/>
 <meta name="twitter:image" content="https://d-dgym.com/og-image.jpg"/>
+<meta name="twitter:image:alt" content="디디짐 d_d GYM - 의정부 1:1 퍼스널트레이닝 전문 헬스장"/>
 
 <!-- GEO / Local -->
 <meta name="geo.region" content="KR-GG"/>
@@ -46,51 +50,110 @@
 <meta name="geo.position" content="37.74044466113;127.035134903668"/>
 <meta name="ICBM" content="37.74044466113, 127.035134903668"/>
 
-<!-- Structured Data: LocalBusiness -->
+<!-- Structured Data: LocalBusiness + WebSite -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "HealthClub",
-  "@id": "https://d-dgym.com/#localbusiness",
-  "name": "디디짐",
-  "alternateName": "d_d GYM",
-  "description": "의정부 대성빌딩 지하1층에 위치한 1:1 퍼스널트레이닝 전문 프리미엄 헬스장. 검증된 트레이너가 체계적인 운동 스케줄과 자세 교정을 제공합니다.",
-  "url": "https://d-dgym.com/",
-  "image": "https://d-dgym.com/og-image.jpg",
-  "telephone": "+82-507-1349-2054",
-  "priceRange": "₩₩",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "의정로84 대성빌딩 지하1층",
-    "addressLocality": "의정부시",
-    "addressRegion": "경기도",
-    "postalCode": "11645",
-    "addressCountry": "KR"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 37.74044466113,
-    "longitude": 127.035134903668
-  },
-  "openingHoursSpecification": [
+  "@graph": [
     {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      "opens": "06:00",
-      "closes": "23:00"
+      "@type": ["HealthClub", "ExerciseGym"],
+      "@id": "https://d-dgym.com/#localbusiness",
+      "name": "디디짐",
+      "alternateName": ["d_d GYM", "디디짐 의정부점"],
+      "description": "의정부 대성빌딩 지하1층에 위치한 1:1 퍼스널트레이닝(PT) 전문 프리미엄 헬스장. 검증된 트레이너가 체계적인 운동 스케줄과 맞춤 자세 교정, 재활 운동, 다이어트, 근력 트레이닝을 제공합니다.",
+      "url": "https://d-dgym.com/",
+      "image": "https://d-dgym.com/og-image.jpg",
+      "logo": "https://d-dgym.com/apple-touch-icon.png",
+      "telephone": "+82-507-1349-2054",
+      "priceRange": "₩₩",
+      "currenciesAccepted": "KRW",
+      "knowsLanguage": "ko",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "의정로84 대성빌딩 지하1층",
+        "addressLocality": "의정부시",
+        "addressRegion": "경기도",
+        "postalCode": "11645",
+        "addressCountry": "KR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 37.74044466113,
+        "longitude": 127.035134903668
+      },
+      "hasMap": "https://naver.me/FqWtBqiU",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "06:00",
+          "closes": "23:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Saturday", "Sunday"],
+          "opens": "09:00",
+          "closes": "18:00"
+        }
+      ],
+      "areaServed": [
+        { "@type": "City", "name": "의정부시" },
+        { "@type": "City", "name": "양주시" },
+        { "@type": "City", "name": "포천시" }
+      ],
+      "knowsAbout": ["퍼스널트레이닝", "1:1 PT", "자세 교정", "재활 운동", "다이어트", "근력 운동", "보디빌딩"],
+      "founder": { "@type": "Person", "name": "배명원", "jobTitle": "대표" },
+      "employee": [
+        {
+          "@type": "Person",
+          "name": "배명원",
+          "jobTitle": "대표 / 트레이너",
+          "description": "공학박사 과정, 문화체육관광부 스포츠지도사, NSCA 인증, 재활전문가(RES), 스포츠영양코치(SNC)"
+        },
+        {
+          "@type": "Person",
+          "name": "조상준",
+          "jobTitle": "트레이너",
+          "description": "세종대학교 체육학부, 농구 선수 출신, 장애인 스포츠지도사(역도), 보디빌딩 생활 2급, 스포츠 경영 관리사"
+        },
+        {
+          "@type": "Person",
+          "name": "이경회",
+          "jobTitle": "트레이너 / 물리치료사",
+          "description": "보건복지부 물리치료사 면허, U16·U18 남자농구 국가대표팀 트레이너, 재활 운동 전문"
+        }
+      ],
+      "review": [
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "엉엉2" },
+          "datePublished": "2026-03-25",
+          "reviewBody": "사전에 개개인의 컨디션을 체크해주시면서 체계적으로 운동 스케줄을 짜주시고 꼼꼼하게 자세를 봐주셔서 디디짐으로 정착했어요. 어느 부분의 근육을 사용해야 하는지 정확하게 잡아주셔서 이해가 쉬웠습니다. 의정부 주민분들 고민 말고 한번 받아보세요."
+        },
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "두비두바95" },
+          "datePublished": "2026-05-07",
+          "reviewBody": "상담도 친절하게 잘해주시고 필요한 운동법만 전문적으로 알려주십니다. 강추합니다."
+        },
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "okj****" },
+          "datePublished": "2026-05-07",
+          "reviewBody": "수업할 때 집중도 잘 해주시고 컨디션에 맞춰 난이도 조절도 잘 해주십니다. 재등록도 했어요!"
+        }
+      ],
+      "sameAs": ["https://naver.me/FqWtBqiU"]
     },
     {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Saturday", "Sunday"],
-      "opens": "09:00",
-      "closes": "18:00"
+      "@type": "WebSite",
+      "@id": "https://d-dgym.com/#website",
+      "url": "https://d-dgym.com/",
+      "name": "디디짐 (d_d GYM)",
+      "inLanguage": "ko",
+      "publisher": { "@id": "https://d-dgym.com/#localbusiness" }
     }
-  ],
-  "areaServed": {
-    "@type": "City",
-    "name": "의정부시"
-  },
-  "sameAs": []
+  ]
 }
 </script>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
