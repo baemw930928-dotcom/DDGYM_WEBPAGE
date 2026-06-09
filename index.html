@@ -254,6 +254,8 @@
         /* Hide scrollbars on swipe carousels */
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
         .no-scrollbar::-webkit-scrollbar { display: none; }
+        /* Infinite-loop carousels must reposition instantly (no smooth-scroll rewind) */
+        [data-loop] { scroll-behavior: auto; }
         @media (prefers-reduced-motion: reduce) {
             .aurora-mesh { animation: none; }
             .parallax-orb { transition: none; }
@@ -862,12 +864,22 @@
         if (!k || c.children.length < k + 1) { c.__setW = 0; return; }
         c.__setW = c.children[k].offsetLeft - c.children[0].offsetLeft;
     }
+    function reposition(c, delta) {
+        // Turn off snap so re-enabling it doesn't animate a "rewind" (ghosting).
+        var prevSnap = c.style.scrollSnapType;
+        c.style.scrollSnapType = 'none';
+        c.scrollLeft += delta;
+        if (c.__snapRAF) cancelAnimationFrame(c.__snapRAF);
+        c.__snapRAF = requestAnimationFrame(function () {
+            c.style.scrollSnapType = prevSnap || '';
+        });
+    }
     function onScroll(e) {
         var c = e.currentTarget;
         if (!c.__loopOn || !c.__setW) return;
         var w = c.__setW;
-        if (c.scrollLeft <= w * 0.5) { c.scrollLeft += w; }
-        else if (c.scrollLeft >= w * 1.5) { c.scrollLeft -= w; }
+        if (c.scrollLeft <= w * 0.5) { reposition(c, w); }
+        else if (c.scrollLeft >= w * 1.5) { reposition(c, -w); }
     }
     function enable(c) {
         if (c.__loopOn) return;
@@ -902,6 +914,13 @@
             carousels.forEach(function (c) { if (c.__loopOn) measure(c); });
         }, 200);
     }, { passive: true });
+    window.addEventListener('load', function () {
+        carousels.forEach(function (c) {
+            if (!c.__loopOn) return;
+            measure(c);
+            if (c.__setW && c.scrollLeft < 1) c.scrollLeft = c.__setW;
+        });
+    });
 
     if (mq.addEventListener) mq.addEventListener('change', apply);
     else if (mq.addListener) mq.addListener(apply);
