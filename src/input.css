@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---- Inline SVG icon helper (replaces Material Symbols icon font) ---- */
+.ms-icon {
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  flex-shrink: 0;
+  vertical-align: -0.125em;
+  fill: currentColor;
+}
+
+/* ---- Hero: flowing mesh gradient (Gemini / Apple-Health style) ---- */
+.vitality-gradient {
+  position: relative;
+  background: #fde7db;
+  isolation: isolate;
+}
+.aurora-mesh {
+  position: absolute;
+  inset: -30%;
+  z-index: 0;
+  pointer-events: none;
+  filter: blur(56px) saturate(1.2);
+  background:
+    radial-gradient(28% 30% at 24% 28%, #ff5c00 0%, rgba(255, 92, 0, 0) 60%),
+    radial-gradient(26% 28% at 76% 22%, #ff6f91 0%, rgba(255, 111, 145, 0) 62%),
+    radial-gradient(32% 32% at 64% 70%, #ffd36e 0%, rgba(255, 211, 110, 0) 60%),
+    radial-gradient(30% 30% at 28% 74%, #ff8a3d 0%, rgba(255, 138, 61, 0) 60%),
+    radial-gradient(44% 44% at 50% 48%, #ffb59a 0%, rgba(255, 181, 154, 0) 70%);
+  background-repeat: no-repeat;
+  will-change: transform;
+  animation: mesh-flow 18s ease-in-out infinite alternate;
+}
+@keyframes mesh-flow {
+  0%   { transform: translate3d(0, 0, 0) rotate(0deg) scale(1.05); }
+  33%  { transform: translate3d(2.5%, -3%, 0) rotate(5deg) scale(1.14); }
+  66%  { transform: translate3d(-3%, 2.5%, 0) rotate(-4deg) scale(1.09); }
+  100% { transform: translate3d(1.5%, 3.5%, 0) rotate(3deg) scale(1.12); }
+}
+.vitality-gradient::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(253, 231, 219, 0.10) 0%, rgba(255, 255, 255, 0) 45%, rgba(249, 249, 249, 0.55) 86%, #f9f9f9 100%);
+}
+.parallax-orb {
+  z-index: 0;
+  will-change: transform;
+  transition: transform 0.12s linear;
+}
+
+/* ---- Glass cards ---- */
+.glass-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(242, 242, 247, 0.5);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
+}
+
+/* ---- Hide scrollbars on swipe carousels ---- */
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .aurora-mesh { animation: none; }
+  .parallax-orb { transition: none; }
+}

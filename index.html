@@ -5,7 +5,7 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 
 <!-- Security: prefer HTTP headers when the host allows; meta is best-effort -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://www.clarity.ms https://*.clarity.ms https://www.googletagmanager.com https://www.google-analytics.com https://unpkg.com https://oapi.map.naver.com https://*.pstatic.net https://*.map.naver.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob: https://www.google-analytics.com https://www.googletagmanager.com https://www.clarity.ms https://*.clarity.ms https://c.bing.com https://*.pstatic.net https://*.map.naver.com https://*.map.naver.net https://oapi.map.naver.com; connect-src 'self' https://formspree.io https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://*.clarity.ms https://c.bing.com https://oapi.map.naver.com https://*.map.naver.com https://*.map.naver.net https://*.pstatic.net https://*.navercorp.com; form-action https://formspree.io; frame-ancestors 'none'; base-uri 'self'; upgrade-insecure-requests"/>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.clarity.ms https://*.clarity.ms https://www.googletagmanager.com https://www.google-analytics.com https://unpkg.com https://oapi.map.naver.com https://*.pstatic.net https://*.map.naver.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob: https://www.google-analytics.com https://www.googletagmanager.com https://www.clarity.ms https://*.clarity.ms https://c.bing.com https://*.pstatic.net https://*.map.naver.com https://*.map.naver.net https://oapi.map.naver.com; connect-src 'self' https://formspree.io https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://*.clarity.ms https://c.bing.com https://oapi.map.naver.com https://*.map.naver.com https://*.map.naver.net https://*.pstatic.net https://*.navercorp.com; form-action https://formspree.io; frame-ancestors 'none'; base-uri 'self'; upgrade-insecure-requests"/>
 <meta http-equiv="X-Content-Type-Options" content="nosniff"/>
 <meta name="referrer" content="strict-origin-when-cross-origin"/>
 <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()"/>
@@ -32,8 +32,8 @@
 <meta property="og:description" content="의정부 대성빌딩 지하1층 디디짐. 검증된 트레이너의 1:1 퍼스널트레이닝으로 체계적인 운동 스케줄과 맞춤 자세 교정을 경험하세요."/>
 <meta property="og:url" content="https://d-dgym.com/"/>
 <meta property="og:image" content="https://d-dgym.com/og-image.jpg"/>
-<meta property="og:image:width" content="2048"/>
-<meta property="og:image:height" content="2048"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
 <meta property="og:image:alt" content="디디짐 d_d GYM - 의정부 1:1 퍼스널트레이닝 전문 헬스장"/>
 <meta property="og:locale" content="ko_KR"/>
 
@@ -156,200 +156,45 @@
   ]
 }
 </script>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+<link rel="stylesheet" href="/styles.css"/>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet" crossorigin="anonymous"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" crossorigin="anonymous"/>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "tertiary-fixed": "#e2e2e2",
-                    "primary-fixed-dim": "#ffb59a",
-                    "outline-variant": "#e4beb1",
-                    "on-surface-variant": "#5b4137",
-                    "surface-container-highest": "#e2e2e2",
-                    "on-primary-fixed": "#370e00",
-                    "error": "#ba1a1a",
-                    "surface-tint": "#a73a00",
-                    "tertiary": "#5e5e5e",
-                    "on-primary-fixed-variant": "#802a00",
-                    "secondary-fixed-dim": "#ffb68f",
-                    "on-tertiary": "#ffffff",
-                    "on-secondary-fixed-variant": "#6d3919",
-                    "on-background": "#1a1c1c",
-                    "primary": "#a73a00",
-                    "on-tertiary-fixed": "#1b1b1b",
-                    "secondary-container": "#feb289",
-                    "on-tertiary-fixed-variant": "#474747",
-                    "secondary-fixed": "#ffdbca",
-                    "surface-container-lowest": "#ffffff",
-                    "surface-dim": "#dadada",
-                    "tertiary-fixed-dim": "#c6c6c6",
-                    "surface-bright": "#f9f9f9",
-                    "on-error": "#ffffff",
-                    "inverse-primary": "#ffb59a",
-                    "on-primary": "#ffffff",
-                    "surface-container-low": "#f3f3f4",
-                    "inverse-on-surface": "#f0f1f1",
-                    "on-secondary-container": "#794222",
-                    "on-secondary-fixed": "#331200",
-                    "surface": "#f9f9f9",
-                    "inverse-surface": "#2f3131",
-                    "on-primary-container": "#521800",
-                    "on-secondary": "#ffffff",
-                    "on-error-container": "#93000a",
-                    "outline": "#8f7065",
-                    "primary-container": "#ff5c00",
-                    "surface-container-high": "#e8e8e8",
-                    "tertiary-container": "#929292",
-                    "background": "#f9f9f9",
-                    "primary-fixed": "#ffdbce",
-                    "error-container": "#ffdad6",
-                    "surface-variant": "#e2e2e2",
-                    "on-surface": "#1a1c1c",
-                    "secondary": "#89502e",
-                    "on-tertiary-container": "#2b2b2b",
-                    "surface-container": "#eeeeee"
-            },
-            "borderRadius": {
-                    "DEFAULT": "0.25rem",
-                    "lg": "0.5rem",
-                    "xl": "0.75rem",
-                    "full": "9999px"
-            },
-            "spacing": {
-                    "unit": "8px",
-                    "container-padding-desktop": "40px",
-                    "section-gap": "48px",
-                    "gutter": "16px",
-                    "container-padding-mobile": "20px",
-                    "gutter-desktop": "32px",
-                    "base": "8px",
-                    "max-width": "1280px",
-                    "margin-desktop": "64px",
-                    "margin-mobile": "24px",
-                    "gutter-mobile": "16px",
-                    "section-padding-desktop": "120px",
-                    "section-padding-mobile": "48px"
-            },
-            "fontFamily": {
-                    "body-lg": ["Inter"],
-                    "body-md": ["Inter"],
-                    "label-bold": ["Plus Jakarta Sans"],
-                    "label-md": ["Plus Jakarta Sans"],
-                    "label-sm": ["Plus Jakarta Sans"],
-                    "headline-lg": ["Plus Jakarta Sans"],
-                    "headline-lg-mobile": ["Plus Jakarta Sans"],
-                    "headline-md": ["Plus Jakarta Sans"],
-                    "display-lg": ["Plus Jakarta Sans"],
-                    "stats-number": ["Plus Jakarta Sans"]
-            },
-            "fontSize": {
-                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                    "label-bold": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "700"}],
-                    "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
-                    "label-sm": ["12px", {"lineHeight": "1.2", "fontWeight": "500"}],
-                    "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
-                    "headline-lg-mobile": ["28px", {"lineHeight": "1.2", "fontWeight": "700"}],
-                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}],
-                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
-                    "stats-number": ["36px", {"lineHeight": "1.0", "fontWeight": "800"}]
-            }
-          },
-        },
-      }
-    </script>
-<style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        .material-symbols-outlined.fill {
-            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        /* Hero base — soft warm canvas that the flowing mesh sits on */
-        .vitality-gradient {
-            position: relative;
-            background: #fde7db;
-            isolation: isolate;
-        }
-        /* Gemini / Apple-Health style flowing mesh gradient */
-        .aurora-mesh {
-            position: absolute;
-            inset: -30%;
-            z-index: 0;
-            pointer-events: none;
-            filter: blur(56px) saturate(1.2);
-            background:
-                radial-gradient(28% 30% at 24% 28%, #ff5c00 0%, rgba(255, 92, 0, 0) 60%),
-                radial-gradient(26% 28% at 76% 22%, #ff6f91 0%, rgba(255, 111, 145, 0) 62%),
-                radial-gradient(32% 32% at 64% 70%, #ffd36e 0%, rgba(255, 211, 110, 0) 60%),
-                radial-gradient(30% 30% at 28% 74%, #ff8a3d 0%, rgba(255, 138, 61, 0) 60%),
-                radial-gradient(44% 44% at 50% 48%, #ffb59a 0%, rgba(255, 181, 154, 0) 70%);
-            background-repeat: no-repeat;
-            will-change: transform;
-            animation: mesh-flow 18s ease-in-out infinite alternate;
-        }
-        @keyframes mesh-flow {
-            0%   { transform: translate3d(0, 0, 0) rotate(0deg) scale(1.05); }
-            33%  { transform: translate3d(2.5%, -3%, 0) rotate(5deg) scale(1.14); }
-            66%  { transform: translate3d(-3%, 2.5%, 0) rotate(-4deg) scale(1.09); }
-            100% { transform: translate3d(1.5%, 3.5%, 0) rotate(3deg) scale(1.12); }
-        }
-        /* Readability + seamless blend into the page below */
-        .vitality-gradient::after {
-            content: "";
-            position: absolute;
-            inset: 0;
-            z-index: 1;
-            pointer-events: none;
-            background: linear-gradient(180deg, rgba(253, 231, 219, 0.10) 0%, rgba(255, 255, 255, 0) 45%, rgba(249, 249, 249, 0.55) 86%, #f9f9f9 100%);
-        }
-        .parallax-orb {
-            z-index: 0;
-            will-change: transform;
-            transition: transform 0.12s linear;
-        }
-        /* Hide scrollbars on swipe carousels */
-        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-        .no-scrollbar::-webkit-scrollbar { display: none; }
-        @media (prefers-reduced-motion: reduce) {
-            .aurora-mesh { animation: none; }
-            .parallax-orb { transition: none; }
-        }
-        .glass-card {
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(242, 242, 247, 0.5);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
-        }
-        .progress-ring-circle {
-            transition: stroke-dashoffset 0.35s, stroke-width 0.2s;
-            transform: rotate(-90deg);
-            transform-origin: 50% 50%;
-        }
-    </style>
-
-<!-- Microsoft Clarity -->
-<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "wwjrqeno23");
-</script>
-
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-G0WSZX6906"></script>
+<!-- Analytics (GA4 + Microsoft Clarity): deferred to first interaction or idle to keep initial render fast -->
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-G0WSZX6906');
+(function () {
+    var GA_ID = 'G-G0WSZX6906';
+    var CLARITY_ID = 'wwjrqeno23';
+    var started = false;
+    function loadAnalytics() {
+        if (started) return;
+        started = true;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+        document.head.appendChild(s);
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        window.gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', GA_ID);
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
+            t = l.createElement(r); t.async = 1; t.src = 'https://www.clarity.ms/tag/' + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, 'clarity', 'script', CLARITY_ID);
+    }
+    var events = ['pointerdown', 'keydown', 'touchstart', 'scroll'];
+    function onFirst() {
+        events.forEach(function (e) { window.removeEventListener(e, onFirst, { passive: true }); });
+        loadAnalytics();
+    }
+    events.forEach(function (e) { window.addEventListener(e, onFirst, { passive: true }); });
+    window.addEventListener('load', function () {
+        if ('requestIdleCallback' in window) requestIdleCallback(loadAnalytics, { timeout: 5000 });
+        else setTimeout(loadAnalytics, 4000);
+    });
+})();
 </script>
 </head>
 <body class="bg-background text-on-surface antialiased min-h-screen flex flex-col selection:bg-primary-fixed selection:text-on-primary-fixed overflow-x-hidden">
@@ -370,7 +215,7 @@
             지금 가입하기
         </a>
 <button id="mobile-menu-toggle" class="md:hidden text-on-surface p-2" aria-label="메뉴 열기/닫기" aria-expanded="false" aria-controls="mobile-menu">
-<span id="mobile-menu-icon" class="material-symbols-outlined text-2xl">menu</span>
+<svg id="mobile-menu-icon" class="ms-icon text-2xl" viewBox="0 -960 960 960" aria-hidden="true" focusable="false"><path d="M120-240v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg>
 </button>
 </div>
 <!-- Mobile menu -->
@@ -394,15 +239,21 @@
     const icon = document.getElementById('mobile-menu-icon');
     if (!toggle || !menu || !icon) return;
 
+    const MENU_D = 'M120-240v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z';
+    const CLOSE_D = 'm249-207-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z';
+    function setIcon(d) {
+        const p = icon.querySelector('path');
+        if (p) p.setAttribute('d', d);
+    }
     function closeMenu() {
         menu.classList.add('hidden');
         toggle.setAttribute('aria-expanded', 'false');
-        icon.textContent = 'menu';
+        setIcon(MENU_D);
     }
     function openMenu() {
         menu.classList.remove('hidden');
         toggle.setAttribute('aria-expanded', 'true');
-        icon.textContent = 'close';
+        setIcon(CLOSE_D);
     }
     toggle.addEventListener('click', function () {
         if (menu.classList.contains('hidden')) openMenu();
@@ -433,7 +284,7 @@
 <div class="pt-6 sm:pt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-stretch sm:items-center">
 <a href="https://open.kakao.com/o/sbE57ahg" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 bg-primary-container text-on-primary font-label-bold text-label-bold rounded-full shadow-lg hover:shadow-xl active:scale-95 transition-all">무료 상담 시작하기</a>
 <a href="#why-premium" class="w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 bg-white/20 backdrop-blur-md border border-white/30 text-on-surface font-label-bold text-label-bold rounded-full hover:bg-white/40 transition-all flex items-center justify-center gap-2">
-<span class="material-symbols-outlined">arrow_downward</span>
+<svg class="ms-icon" viewBox="0 -960 960 960" aria-hidden="true" focusable="false"><path d="M450-800v526L202-522l-42 42 320 320 320-320-42-42-248 248v-526h-60Z"/></svg>
                         더 알아보기
                     </a>
 </div>
@@ -447,14 +298,14 @@
 <p class="font-body-md text-body-md text-on-surface-variant max-w-xl mx-auto">단순한 헬스장을 넘어, 회원님의 변화를 끝까지 책임지는 <span class="text-primary-container font-bold">d_d GYM</span>만의 세 가지 약속입니다.</p>
 </div>
 <div class="md:hidden flex items-center justify-center gap-1.5 mb-5 text-on-surface-variant/60">
-<span class="material-symbols-outlined text-lg">swipe</span>
+<svg class="ms-icon text-lg" viewBox="0 -960 960 960" aria-hidden="true" focusable="false"><path d="M470-80q-21.88 0-41.94-8T392-112L184-320l15-22q11-16 28.5-22.5T264-366l96 26v-340q0-12.75 8.68-21.38 8.67-8.62 21.5-8.62 12.82 0 21.32 8.62 8.5 8.63 8.5 21.38v420l-124-33 139.18 139.18Q442-147 451.13-143.5q9.13 3.5 18.87 3.5h170q42 0 71-29t29-71v-180q0-12.75 8.68-21.38 8.67-8.62 21.5-8.62 12.82 0 21.32 8.62 8.5 8.63 8.5 21.38v180q0 66-47 113T640-80H470Zm17-290v-170q0-12.75 8.68-21.38 8.67-8.62 21.5-8.62 12.82 0 21.32 8.62 8.5 8.63 8.5 21.38v170h-60Zm126 0v-130q0-12.75 8.68-21.38 8.67-8.62 21.5-8.62 12.82 0 21.32 8.62 8.5 8.63 8.5 21.38v130h-60Zm-46 105Zm313-435H700v-40h133q-75-65-164.5-102.5T480-880q-99 0-188.5 37.5T127-740h133v40H80v-180h40v93q78-62 169-97.5T480-920q100 0 191 35.5T840-787v-93h40v180Z"/></svg>
 <span class="font-label-sm text-label-sm">옆으로 밀어보세요</span>
 </div>
 <div class="flex md:grid md:grid-cols-3 gap-4 md:gap-12 overflow-x-auto md:overflow-visible snap-x snap-mandatory no-scrollbar -mx-5 px-5 md:mx-0 md:px-0 pb-2 md:pb-0">
 <!-- Feature 1 -->
 <div class="snap-center shrink-0 w-[82%] sm:w-[48%] md:w-auto glass-card rounded-[32px] p-8 flex flex-col items-center text-center group hover:shadow-xl transition-all duration-500">
 <div class="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors duration-300">
-<span class="material-symbols-outlined text-3xl">door_front</span>
+<svg class="ms-icon text-3xl" viewBox="0 -960 960 960" aria-hidden="true" focusable="false"><path d="M120-120v-60h80v-600q0-24 18-42t42-18h440q24 0 42 18t18 42v600h80v60H120Zm580-60v-600H260v600h440ZM567-449q14.45 0 24.22-9.77Q601-468.55 601-483q0-14.45-9.78-24.23Q581.45-517 567-517t-24.22 9.77Q533-497.45 533-483q0 14.45 9.78 24.23Q552.55-449 567-449ZM260-780v600-600Z"/></svg>
 </div>
 <h3 class="font-headline-md text-headline-md mb-3">프라이빗한 공간</h3>
 <p class="font-body-md text-body-md text-on-surface-variant">인원수 제한으로 집중된 트레이닝 분위기를 만듭니다. 붐비지 않는 공간에서 오롯이 나의 운동에만 몰입할 수 있습니다.</p>
@@ -462,7 +313,7 @@
 <!-- Feature 2 -->
 <div class="snap-center shrink-0 w-[82%] sm:w-[48%] md:w-auto glass-card rounded-[32px] p-8 flex flex-col items-center text-center group hover:shadow-xl transition-all duration-500">
 <div class="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors duration-300">
-<span class="material-symbols-outlined text-3xl">favorite</span>
+<svg class="ms-icon text-3xl" viewBox="0 -960 960 960" aria-hidden="true" focusable="false"><path d="m480-121-41-37q-105.77-97.12-174.88-167.56Q195-396 154-451.5T96.5-552Q80-597 80-643q0-90.15 60.5-150.58Q201-854 290-854q57 0 105.5 27t84.5 78q42-54 89-79.5T670-854q89 0 149.5 60.42Q880-733.15 880-643q0 46-16.5 91T806-451.5Q765-396 695.88-325.56 626.77-255.12 521-158l-41 37Zm0-79q101.24-93 166.62-159.5Q712-426 750.5-476t54-89.14q15.5-39.13 15.5-77.72 0-66.14-42-108.64T670.22-794q-51.52 0-95.37 31.5T504-674h-49q-26-56-69.85-88-43.85-32-95.37-32Q224-794 182-751.5t-42 108.82q0 38.68 15.5 78.18 15.5 39.5 54 90T314-358q66 66 166 158Zm0-297Z"/></svg>
 </div>
 <h3 class="font-headline-md text-headline-md mb-3">끝까지 완주하게 만드는 동기부여</h3>
 <p class="font-body-md text-body-md text-on-surface-variant">숫자만 세는 트레이너가 아닙니다. 매 수업 회원님의 컨디션과 멘탈을 세심하게 체크하고, 운동이 즐거운 습관이 될 때까지 진심으로 소통하며 이끌어 드립니다.</p>
@@ -470,7 +321,7 @@
 <!-- Feature 3 -->
 <div class="snap-center shrink-0 w-[82%] sm:w-[48%] md:w-auto glass-card rounded-[32px] p-8 flex flex-col items-center text-center group hover:shadow-xl transition-all duration-500">
 <div class="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors duration-300">
-<span class="material-symbols-outlined text-3xl">verified</span>
+<svg class="ms-icon text-3xl" viewBox="0 -960 960 960" aria-hidden="true" focusable="false"><path d="m346-60-76-130-151-31 17-147-96-112 96-111-17-147 151-31 76-131 134 62 134-62 77 131 150 31-17 147 96 111-96 112 17 147-150 31-77 130-134-62-134 62Zm27-79 107-45 110 45 67-100 117-30-12-119 81-92-81-94 12-119-117-28-69-100-108 45-110-45-67 100-117 28 12 119-81 94 81 92-12 121 117 28 70 100Zm107-341Zm-43 133 227-225-45-41-182 180-95-99-46 45 141 140Z"/></svg>
 </div>
 <h3 class="font-headline-md text-headline-md mb-3">검증된 트레이너</h3>
 <p class="font-body-md text-body-md text-on-surface-variant">물리치료사 면허 보유, 전 국가대표 선수 트레이너 등 검증된 전문가들이 안전하고 체계적인 트레이닝을 제공합니다.</p>
@@ -485,20 +336,20 @@
 <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">디디짐의 코치는 단순한 트레이너가 아니라, 회원 한 분 한 분에게 최적화된 변화를 설계하는 퍼포먼스 전문가입니다.</p>
 </div>
 <div class="md:hidden flex items-center justify-center gap-1.5 mb-5 text-on-surface-variant/60">
-<span class="material-symbols-outlined text-lg">swipe</span>
+<svg class="ms-icon text-lg" viewBox="0 -960 960 960" aria-hidden="true" focusable="false"><path d="M470-80q-21.88 0-41.94-8T392-112L184-320l15-22q11-16 28.5-22.5T264-366l96 26v-340q0-12.75 8.68-21.38 8.67-8.62 21.5-8.62 12.82 0 21.32 8.62 8.5 8.63 8.5 21.38v420l-124-33 139.18 139.18Q442-147 451.13-143.5q9.13 3.5 18.87 3.5h170q42 0 71-29t29-71v-180q0-12.75 8.68-21.38 8.67-8.62 21.5-8.62 12.82 0 21.32 8.62 8.5 8.63 8.5 21.38v180q0 66-47 113T640-80H470Zm17-290v-170q0-12.75 8.68-21.38 8.67-8.62 21.5-8.62 12.82 0 21.32 8.62 8.5 8.63 8.5 21.38v170h-60Zm126 0v-130q0-12.75 8.68-21.38 8.67-8.62 21.5-8.62 12.82 0 21.32 8.62 8.5 8.63 8.5 21.38v130h-60Zm-46 105Zm313-435H700v-40h133q-75-65-164.5-102.5T480-880q-99 0-188.5 37.5T127-740h133v40H80v-180h40v93q78-62 169-97.5T480-920q100 0 191 35.5T840-787v-93h40v180Z"/></svg>
 <span class="font-label-sm text-label-sm">옆으로 밀어보세요</span>
 </div>
 <div class="flex md:grid md:grid-cols-3 gap-4 md:gap-gutter overflow-x-auto md:overflow-visible snap-x snap-mandatory no-scrollbar -mx-5 px-5 md:mx-0 md:px-0 pb-2 md:pb-0">
 <!-- Trainer 1: 배명원 대표 -->
 <figure class="snap-center shrink-0 w-[85%] sm:w-[60%] md:w-auto group glass-card rounded-[32px] p-3 sm:p-4 hover:shadow-xl transition-all duration-500">
 <div class="rounded-[24px] overflow-hidden">
-<img src="img/trainer-bae-myeongwon.jpg" width="900" height="1397" loading="lazy" decoding="async" alt="배명원 디디짐 대표 약력 — 공학박사 과정, 삼성SDS 임직원 운동지도, 경민대학교 운동지도 초청강의, NSCA 인증, 재활전문가(RES), 스포츠영양코치(SNC), CPR 수료" class="w-full h-auto object-cover group-hover:scale-[1.02] transition-transform duration-700"/>
+<picture><source type="image/webp" srcset="img/trainer-bae-myeongwon.webp"/><img src="img/trainer-bae-myeongwon.jpg" width="900" height="1397" loading="lazy" decoding="async" alt="배명원 디디짐 대표 약력 — 공학박사 과정, 삼성SDS 임직원 운동지도, 경민대학교 운동지도 초청강의, NSCA 인증, 재활전문가(RES), 스포츠영양코치(SNC), CPR 수료" class="block w-full h-auto object-cover group-hover:scale-[1.02] transition-transform duration-700"/></picture>
 </div>
 <figcaption class="px-2 pt-4 pb-1 text-center">
 <span class="text-primary font-label-bold text-label-bold uppercase tracking-widest">대표 · CEO</span>
 <h3 class="font-headline-md text-headline-md mt-1">배명원</h3>
 <a href="#contact" class="inline-flex items-center gap-1 mt-2 text-primary font-label-bold text-label-bold hover:underline">
-<span class="material-symbols-outlined text-base">handshake</span>
+<svg class="ms-icon text-base" viewBox="0 -960 960 960" aria-hidden="true" focusable="false"><path d="M475-140q5 0 11.5-2.5T497-149l337-338q13-13 19.5-29.67Q860-533.33 860-550q0-17-6.5-34T834-614L654-794q-13-13-30-19.5t-34-6.5q-16.67 0-33.33 6.5Q540-807 527-794l-18 18 81 82q13 14 23 32.5t10 40.5q0 38-29.5 67T526-525q-25 0-41.5-7.5t-30.19-21.34L381-627 200-446q-5 5-7 10.53-2 5.52-2 11.84 0 12.63 8.5 21.13 8.5 8.5 21.17 8.5 6.33 0 11.83-3t9.5-7l138-138 42 42-137 137q-5 5-7 11t-2 12q0 12 9 21t21 9q6 0 11.5-2.5t9.5-6.5l138-138 42 42-137 137q-4 4-6.5 10.33-2.5 6.34-2.5 12.67 0 12 9 21t21 9q6 0 11-2t10-7l138-138 42 42-138 138q-5 5-7 11t-2 11q0 14 8 22t22 8Zm.06 60Q442-80 416-104.5t-31-60.62Q351-170 328-193t-28-57q-34-5-56.5-28.5T216-335q-37-5-61-30t-24-60q0-17 6.72-34.05Q144.45-476.1 157-489l224-224 110 110q8 8 17.33 12.5 9.34 4.5 18.67 4.5 13 0 24.5-11.5t11.5-24.65q0-5.85-3.5-13.35T548-651L405-794q-13-13-30-19.5t-34-6.5q-16.67 0-33.33 6.5-16.67 6.5-29.61 19.36L126-642q-14 14-19.5 29.5t-6.5 35q-1 19.5 7.5 38T128-506l-43 43q-20-22-32.5-53T40-579q0-30 11.5-57.5T84-685l151-151q22-22 49.79-32.5 27.8-10.5 57-10.5 29.21 0 56.71 10.5T448-836l18 18 18-18q22-22 49.79-32.5 27.8-10.5 57-10.5 29.21 0 56.71 10.5T697-836l179 179q22 22 33 50.03 11 28.04 11 57 0 28.97-11 56.47T876-444L539-107q-13 13-29.53 20t-34.41 7ZM377-626Z"/></svg>
 제휴 및 비즈니스 문의
 </a>
 </figcaption>
@@ -506,13 +357,13 @@
 <!-- Trainer 2: 조상준 트레이너 -->
 <figure class="snap-center shrink-0 w-[85%] sm:w-[60%] md:w-auto group glass-card rounded-[32px] p-3 sm:p-4 hover:shadow-xl transition-all duration-500">
 <div class="rounded-[24px] overflow-hidden">
-<img src="img/trainer-cho-sangjun.jpg" width="900" height="1397" loading="lazy" decoding="async" alt="조상준 디디짐 트레이너 약력 — 세종대학교 체육학부, 농구 선수 출신, 장애인 스포츠지도사(역도), 스포츠안전 테이핑 지도자, 보디빌딩 생활 2급, 스포츠 경영 관리사" class="w-full h-auto object-cover group-hover:scale-[1.02] transition-transform duration-700"/>
+<picture><source type="image/webp" srcset="img/trainer-cho-sangjun.webp"/><img src="img/trainer-cho-sangjun.jpg" width="900" height="1397" loading="lazy" decoding="async" alt="조상준 디디짐 트레이너 약력 — 세종대학교 체육학부, 농구 선수 출신, 장애인 스포츠지도사(역도), 스포츠안전 테이핑 지도자, 보디빌딩 생활 2급, 스포츠 경영 관리사" class="block w-full h-auto object-cover group-hover:scale-[1.02] transition-transform duration-700"/></picture>
 </div>
 <figcaption class="px-2 pt-4 pb-1 text-center">
 <span class="text-primary font-label-bold text-label-bold uppercase tracking-widest">트레이너</span>
 <h3 class="font-headline-md text-headline-md mt-1">조상준</h3>
 <p class="inline-flex items-center gap-1 mt-2 text-primary font-label-bold text-label-bold">
-<span class="material-symbols-outlined text-base">exercise</span>
+<svg class="ms-icon text-base" viewBox="0 -960 960 960" aria-hidden="true" focusable="false"><path d="m826-585-42-42 45-45-157-157-45 45-43-43 30-31q23-23 57-22.5t57 23.5l129 129q23 23 23 56.5T857-615l-31 30ZM346-104q-23 23-56.5 23T233-104L90-247q-17-17.38-17-42.69T90-332l44-44 43 42-45 45 157 157 45-45 42 43-30 30Zm397-308 85-85-331-331-85 85 331 331ZM463-132l86-86-331-331-86 86 331 331Zm9-248 109-109-92-92-109 109 92 92Zm33 290q-16.93 17-41.97 17Q438-73 421-90L90-421q-17-16.93-17-41.97Q73-488 90-505l85-86q17.38-17 42.69-17T260-591l77 77 110-110-77-77q-17-16.93-17-41.97Q353-768 370-785l85-86q17.38-17 42.69-17T540-871l331 331q17 17.38 17 42.69T871-455l-86 85q-16.93 17-41.97 17Q718-353 701-370l-77-77-110 110 77 77q17 17.38 17 42.69T591-175l-86 85Z"/></svg>
 농구 선수 출신 · 근력증가 · 보디빌딩
 </p>
 </figcaption>
@@ -520,13 +371,13 @@
 <!-- Trainer 3: 이경회 트레이너 -->
 <figure class="snap-center shrink-0 w-[85%] sm:w-[60%] md:w-auto group glass-card rounded-[32px] p-3 sm:p-4 hover:shadow-xl transition-all duration-500">
 <div class="rounded-[24px] overflow-hidden">
-<img src="img/trainer-lee-gyeonghoe.jpg" width="900" height="1397" loading="lazy" decoding="async" alt="이경회 디디짐 트레이너 약력 — 보건복지부 물리치료사 면허, U16·U18 남자농구 국가대표팀 트레이너, Netflix 피지컬:아시아 테이핑 트레이너, LG 트윈스 야구단 재활 트레이너, 고려대 운동부 트레이너" class="w-full h-auto object-cover group-hover:scale-[1.02] transition-transform duration-700"/>
+<picture><source type="image/webp" srcset="img/trainer-lee-gyeonghoe.webp"/><img src="img/trainer-lee-gyeonghoe.jpg" width="900" height="1397" loading="lazy" decoding="async" alt="이경회 디디짐 트레이너 약력 — 보건복지부 물리치료사 면허, U16·U18 남자농구 국가대표팀 트레이너, Netflix 피지컬:아시아 테이핑 트레이너, LG 트윈스 야구단 재활 트레이너, 고려대 운동부 트레이너" class="block w-full h-auto object-cover group-hover:scale-[1.02] transition-transform duration-700"/></picture>
 </div>
 <figcaption class="px-2 pt-4 pb-1 text-center">
 <span class="text-primary font-label-bold text-label-bold uppercase tracking-widest">트레이너 · 물리치료사</span>
 <h3 class="font-headline-md text-headline-md mt-1">이경회</h3>
 <p class="inline-flex items-center gap-1 mt-2 text-primary font-label-bold text-label-bold">
-<span class="material-symbols-outlined text-base">medical_services</span>
+<svg class="ms-icon text-base" viewBox="0 -960 960 960" aria-hidden="true" focusable="false"><path d="M140-80q-24 0-42-18t-18-42v-520q0-24 18-42t42-18h180v-100q0-24 18-42t42-18h200q24 0 42 18t18 42v100h180q24 0 42 18t18 42v520q0 24-18 42t-42 18H140Zm0-60h680v-520H140v520Zm240-580h200v-100H380v100ZM140-140v-520 520Zm310-230v120h60v-120h120v-60H510v-120h-60v120H330v60h120Z"/></svg>
 국가대표팀 트레이너 · 재활 운동
 </p>
 </figcaption>
@@ -536,11 +387,11 @@
 <!-- Trust / Reviews -->
 <section class="py-section-gap px-container-padding-mobile md:px-container-padding-desktop max-w-7xl mx-auto" id="reviews">
 <div class="text-center mb-8 md:mb-16">
-<span class="material-symbols-outlined text-4xl text-primary mb-4">format_quote</span>
+<svg class="ms-icon text-4xl text-primary mb-4" viewBox="0 -960 960 960" aria-hidden="true" focusable="false"><path d="m248-240 94-162q-5 1-11 1.5t-11 .5q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 21-5.5 41T458-480L320-240h-72Zm360 0 94-162q-5 1-11 1.5t-11 .5q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 21-5.5 41T818-480L680-240h-72ZM376.5-503.5Q400-527 400-560t-23.5-56.5Q353-640 320-640t-56.5 23.5Q240-593 240-560t23.5 56.5Q287-480 320-480t56.5-23.5Zm360 0Q760-527 760-560t-23.5-56.5Q713-640 680-640t-56.5 23.5Q600-593 600-560t23.5 56.5Q647-480 680-480t56.5-23.5ZM680-560Zm-360 0Z"/></svg>
 <h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg">회원 후기</h2>
 </div>
 <div class="md:hidden flex items-center justify-center gap-1.5 mb-5 text-on-surface-variant/60">
-<span class="material-symbols-outlined text-lg">swipe</span>
+<svg class="ms-icon text-lg" viewBox="0 -960 960 960" aria-hidden="true" focusable="false"><path d="M470-80q-21.88 0-41.94-8T392-112L184-320l15-22q11-16 28.5-22.5T264-366l96 26v-340q0-12.75 8.68-21.38 8.67-8.62 21.5-8.62 12.82 0 21.32 8.62 8.5 8.63 8.5 21.38v420l-124-33 139.18 139.18Q442-147 451.13-143.5q9.13 3.5 18.87 3.5h170q42 0 71-29t29-71v-180q0-12.75 8.68-21.38 8.67-8.62 21.5-8.62 12.82 0 21.32 8.62 8.5 8.63 8.5 21.38v180q0 66-47 113T640-80H470Zm17-290v-170q0-12.75 8.68-21.38 8.67-8.62 21.5-8.62 12.82 0 21.32 8.62 8.5 8.63 8.5 21.38v170h-60Zm126 0v-130q0-12.75 8.68-21.38 8.67-8.62 21.5-8.62 12.82 0 21.32 8.62 8.5 8.63 8.5 21.38v130h-60Zm-46 105Zm313-435H700v-40h133q-75-65-164.5-102.5T480-880q-99 0-188.5 37.5T127-740h133v40H80v-180h40v93q78-62 169-97.5T480-920q100 0 191 35.5T840-787v-93h40v180Z"/></svg>
 <span class="font-label-sm text-label-sm">옆으로 밀어보세요</span>
 </div>
 <div class="flex md:grid md:grid-cols-2 gap-4 md:gap-gutter overflow-x-auto md:overflow-visible snap-x snap-mandatory no-scrollbar -mx-5 px-5 md:mx-auto md:px-0 md:max-w-5xl pb-2 md:pb-0">
@@ -584,7 +435,7 @@
 <p class="font-body-lg text-body-md sm:text-body-lg opacity-90"><span class="text-primary-fixed-dim font-bold">d_d GYM</span>의 프라이빗 1:1 PT, 이번 분기 한정 슬롯이 열려 있습니다. 무료 상담으로 먼저 경험해 보세요.</p>
 <div class="flex justify-center">
 <a href="https://open.kakao.com/o/sbE57ahg" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 w-full sm:w-auto bg-[#FEE500] text-[#3C1E1E] px-8 sm:px-12 py-5 sm:py-6 rounded-full font-label-bold text-label-bold text-lg sm:text-xl hover:brightness-95 active:scale-95 transition-all shadow-2xl">
-<span class="material-symbols-outlined">chat_bubble</span>
+<svg class="ms-icon" viewBox="0 -960 960 960" aria-hidden="true" focusable="false"><path d="M80-80v-740q0-24 18-42t42-18h680q24 0 42 18t18 42v520q0 24-18 42t-42 18H240L80-80Zm134-220h606v-520H140v600l74-80Zm-74 0v-520 520Z"/></svg>
                     카카오톡 채팅상담하기
                 </a>
 </div>
@@ -645,7 +496,7 @@
 <span class="font-label-bold text-label-bold tracking-[0.2em] text-primary mb-4 block uppercase">오시는 길</span>
 <h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg">디디짐 위치</h2>
 <p class="font-body-md text-body-md text-on-surface-variant mt-3 flex items-center justify-center gap-1.5">
-<span class="material-symbols-outlined text-lg text-primary">location_on</span>
+<svg class="ms-icon text-lg text-primary" viewBox="0 -960 960 960" aria-hidden="true" focusable="false"><path d="M529.5-510.5Q550-531 550-560t-20.5-49.5Q509-630 480-630t-49.5 20.5Q410-589 410-560t20.5 49.5Q451-490 480-490t49.5-20.5ZM480-159q133-121 196.5-219.5T740-552q0-118-75.5-193T480-820q-109 0-184.5 75T220-552q0 75 65 173.5T480-159Zm0 79Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z"/></svg>
                     경기도 의정부시 의정로84, 대성빌딩 지하1층
                 </p>
 </div>
@@ -654,7 +505,7 @@
 </div>
 <div class="mt-5 flex justify-center">
 <a href="https://naver.me/FqWtBqiU" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full border border-outline-variant/60 text-on-surface-variant font-label-md text-label-md hover:border-primary hover:text-primary transition-colors">
-<span class="material-symbols-outlined text-base">map</span>
+<svg class="ms-icon text-base" viewBox="0 -960 960 960" aria-hidden="true" focusable="false"><path d="m612-120-263-93-179 71q-17 9-33.5-1T120-173v-558q0-13 7.5-23t19.5-15l202-71 263 92 178-71q17-8 33.5 1.5T840-788v565q0 11-7.5 19T814-192l-202 72Zm-34-75v-505l-196-66v505l196 66Zm60 0 142-47v-512l-142 54v505Zm-458-12 142-54v-505l-142 47v512Zm458-493v505-505Zm-316-66v505-505Z"/></svg>
                     네이버 지도 바로가기
                 </a>
 </div>
@@ -690,7 +541,7 @@
 <div class="flex items-center justify-between px-6 md:px-8 py-5 border-b border-outline-variant/30">
 <h3 id="privacy-modal-title" class="font-headline-md text-headline-md text-primary">개인정보처리방침</h3>
 <button type="button" data-modal-close="privacy-modal" class="text-on-surface-variant hover:text-primary transition-colors" aria-label="닫기">
-<span class="material-symbols-outlined text-2xl">close</span>
+<svg class="ms-icon text-2xl" viewBox="0 -960 960 960" aria-hidden="true" focusable="false"><path d="m249-207-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg>
 </button>
 </div>
 <div class="overflow-y-auto px-6 md:px-8 py-6 font-body-md text-body-md text-on-surface">
@@ -845,7 +696,7 @@
 <div class="flex items-center justify-between px-6 md:px-8 py-5 border-b border-outline-variant/30">
 <h3 id="terms-modal-title" class="font-headline-md text-headline-md text-primary">이용약관</h3>
 <button type="button" data-modal-close="terms-modal" class="text-on-surface-variant hover:text-primary transition-colors" aria-label="닫기">
-<span class="material-symbols-outlined text-2xl">close</span>
+<svg class="ms-icon text-2xl" viewBox="0 -960 960 960" aria-hidden="true" focusable="false"><path d="m249-207-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg>
 </button>
 </div>
 <div class="overflow-y-auto px-6 md:px-8 py-6 space-y-4 font-body-md text-body-md text-on-surface">
@@ -993,16 +844,36 @@
   formspree('initForm', { formElement: '#contact-form', formId: 'xwvznzez' });
 </script>
 <script src="https://unpkg.com/@formspree/ajax@1" defer crossorigin="anonymous"></script>
-<!-- Naver Map -->
-<script src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=lajkpeiv5b"></script>
+<!-- Naver Map: loaded lazily only when the "오시는 길" section nears the viewport -->
 <script>
 (function () {
-    if (typeof naver === 'undefined' || !naver.maps) return;
-    var el = document.getElementById('map');
-    if (!el) return;
-    var pos = new naver.maps.LatLng(37.74044466113, 127.035134903668);
-    var map = new naver.maps.Map('map', { center: pos, zoom: 16 });
-    new naver.maps.Marker({ position: pos, map: map });
+    var target = document.getElementById('map');
+    if (!target) return;
+    var loaded = false;
+    function initMap() {
+        if (typeof naver === 'undefined' || !naver.maps) return;
+        var pos = new naver.maps.LatLng(37.74044466113, 127.035134903668);
+        var map = new naver.maps.Map('map', { center: pos, zoom: 16 });
+        new naver.maps.Marker({ position: pos, map: map });
+    }
+    function loadMap() {
+        if (loaded) return;
+        loaded = true;
+        var s = document.createElement('script');
+        s.src = 'https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=lajkpeiv5b';
+        s.onload = initMap;
+        document.head.appendChild(s);
+    }
+    if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+            entries.forEach(function (e) {
+                if (e.isIntersecting) { io.disconnect(); loadMap(); }
+            });
+        }, { rootMargin: '300px' });
+        io.observe(target);
+    } else {
+        window.addEventListener('load', loadMap);
+    }
 })();
 </script>
 </body></html>
