@@ -387,7 +387,7 @@
 <span class="material-symbols-outlined text-lg">swipe</span>
 <span class="font-label-sm text-label-sm">옆으로 밀어보세요</span>
 </div>
-<div class="flex md:grid md:grid-cols-3 gap-4 md:gap-12 overflow-x-auto md:overflow-visible snap-x snap-mandatory no-scrollbar -mx-5 px-5 md:mx-0 md:px-0 pb-2 md:pb-0">
+<div data-loop class="flex md:grid md:grid-cols-3 gap-4 md:gap-12 overflow-x-auto md:overflow-visible snap-x snap-mandatory no-scrollbar -mx-5 px-5 md:mx-0 md:px-0 pb-2 md:pb-0">
 <!-- Feature 1 -->
 <div class="snap-center shrink-0 w-[82%] sm:w-[48%] md:w-auto glass-card rounded-[32px] p-8 flex flex-col items-center text-center group hover:shadow-xl transition-all duration-500">
 <div class="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors duration-300">
@@ -425,7 +425,7 @@
 <span class="material-symbols-outlined text-lg">swipe</span>
 <span class="font-label-sm text-label-sm">옆으로 밀어보세요</span>
 </div>
-<div class="flex md:grid md:grid-cols-3 gap-4 md:gap-gutter overflow-x-auto md:overflow-visible snap-x snap-mandatory no-scrollbar -mx-5 px-5 md:mx-0 md:px-0 pb-2 md:pb-0">
+<div data-loop class="flex md:grid md:grid-cols-3 gap-4 md:gap-gutter overflow-x-auto md:overflow-visible snap-x snap-mandatory no-scrollbar -mx-5 px-5 md:mx-0 md:px-0 pb-2 md:pb-0">
 <!-- Trainer 1: 배명원 대표 -->
 <figure class="snap-center shrink-0 w-[85%] sm:w-[60%] md:w-auto group glass-card rounded-[32px] p-3 sm:p-4 hover:shadow-xl transition-all duration-500">
 <div class="rounded-[24px] overflow-hidden">
@@ -480,7 +480,7 @@
 <span class="material-symbols-outlined text-lg">swipe</span>
 <span class="font-label-sm text-label-sm">옆으로 밀어보세요</span>
 </div>
-<div class="flex md:grid md:grid-cols-2 gap-4 md:gap-gutter overflow-x-auto md:overflow-visible snap-x snap-mandatory no-scrollbar -mx-5 px-5 md:mx-auto md:px-0 md:max-w-5xl pb-2 md:pb-0">
+<div data-loop class="flex md:grid md:grid-cols-2 gap-4 md:gap-gutter overflow-x-auto md:overflow-visible snap-x snap-mandatory no-scrollbar -mx-5 px-5 md:mx-auto md:px-0 md:max-w-5xl pb-2 md:pb-0">
 <!-- Review 1 -->
 <div class="snap-center shrink-0 w-[85%] md:w-auto glass-card p-8 md:p-10 rounded-[32px] flex flex-col">
 <p class="font-body-md text-body-md text-on-surface leading-relaxed mb-8 flex-grow">
@@ -838,6 +838,74 @@
     var pos = new naver.maps.LatLng(37.74044466113, 127.035134903668);
     var map = new naver.maps.Map('map', { center: pos, zoom: 16 });
     new naver.maps.Marker({ position: pos, map: map });
+})();
+</script>
+<!-- Infinite-loop swipe carousels (mobile only) -->
+<script>
+(function () {
+    var mq = window.matchMedia('(max-width: 767px)');
+    var carousels = [].slice.call(document.querySelectorAll('[data-loop]'));
+    if (!carousels.length) return;
+
+    function buildSet(originals) {
+        var frag = document.createDocumentFragment();
+        originals.forEach(function (n) {
+            var clone = n.cloneNode(true);
+            clone.setAttribute('data-clone', '');
+            clone.setAttribute('aria-hidden', 'true');
+            frag.appendChild(clone);
+        });
+        return frag;
+    }
+    function measure(c) {
+        var k = c.__loopK;
+        if (!k || c.children.length < k + 1) { c.__setW = 0; return; }
+        c.__setW = c.children[k].offsetLeft - c.children[0].offsetLeft;
+    }
+    function onScroll(e) {
+        var c = e.currentTarget;
+        if (!c.__loopOn || !c.__setW) return;
+        var w = c.__setW;
+        if (c.scrollLeft <= w * 0.5) { c.scrollLeft += w; }
+        else if (c.scrollLeft >= w * 1.5) { c.scrollLeft -= w; }
+    }
+    function enable(c) {
+        if (c.__loopOn) return;
+        var originals = [].slice.call(c.children);
+        if (originals.length < 2) return;
+        c.__loopK = originals.length;
+        c.appendChild(buildSet(originals));
+        c.insertBefore(buildSet(originals), c.firstChild);
+        c.__loopOn = true;
+        c.addEventListener('scroll', onScroll, { passive: true });
+        requestAnimationFrame(function () {
+            measure(c);
+            if (c.__setW) c.scrollLeft = c.__setW;
+        });
+    }
+    function disable(c) {
+        if (!c.__loopOn) return;
+        c.removeEventListener('scroll', onScroll);
+        [].slice.call(c.querySelectorAll('[data-clone]')).forEach(function (n) {
+            c.removeChild(n);
+        });
+        c.__loopOn = false;
+        c.scrollLeft = 0;
+    }
+    function apply() {
+        carousels.forEach(function (c) { mq.matches ? enable(c) : disable(c); });
+    }
+    var rt;
+    window.addEventListener('resize', function () {
+        clearTimeout(rt);
+        rt = setTimeout(function () {
+            carousels.forEach(function (c) { if (c.__loopOn) measure(c); });
+        }, 200);
+    }, { passive: true });
+
+    if (mq.addEventListener) mq.addEventListener('change', apply);
+    else if (mq.addListener) mq.addListener(apply);
+    apply();
 })();
 </script>
 </body></html>
