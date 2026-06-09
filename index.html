@@ -5,7 +5,7 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 
 <!-- Security: prefer HTTP headers when the host allows; meta is best-effort -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://www.clarity.ms https://*.clarity.ms https://www.googletagmanager.com https://www.google-analytics.com https://unpkg.com https://oapi.map.naver.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob: https://www.google-analytics.com https://www.googletagmanager.com https://www.clarity.ms https://*.clarity.ms https://c.bing.com https://*.pstatic.net https://*.map.naver.com https://*.map.naver.net https://oapi.map.naver.com; connect-src 'self' https://formspree.io https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://*.clarity.ms https://c.bing.com https://oapi.map.naver.com https://*.map.naver.com https://*.map.naver.net https://*.pstatic.net; form-action https://formspree.io; frame-ancestors 'none'; base-uri 'self'; upgrade-insecure-requests"/>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://www.clarity.ms https://*.clarity.ms https://www.googletagmanager.com https://www.google-analytics.com https://unpkg.com https://oapi.map.naver.com https://*.pstatic.net https://*.map.naver.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob: https://www.google-analytics.com https://www.googletagmanager.com https://www.clarity.ms https://*.clarity.ms https://c.bing.com https://*.pstatic.net https://*.map.naver.com https://*.map.naver.net https://oapi.map.naver.com; connect-src 'self' https://formspree.io https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://*.clarity.ms https://c.bing.com https://oapi.map.naver.com https://*.map.naver.com https://*.map.naver.net https://*.pstatic.net https://*.navercorp.com; form-action https://formspree.io; frame-ancestors 'none'; base-uri 'self'; upgrade-insecure-requests"/>
 <meta http-equiv="X-Content-Type-Options" content="nosniff"/>
 <meta name="referrer" content="strict-origin-when-cross-origin"/>
 <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()"/>
@@ -815,7 +815,7 @@
 </script>
 <script src="https://unpkg.com/@formspree/ajax@1" defer crossorigin="anonymous"></script>
 <!-- Naver Map -->
-<script src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=lajkpeiv5b"></script>
+<script src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=lajkpeiv5b"></script>
 <script>
 (function () {
     if (typeof naver === 'undefined' || !naver.maps) return;
