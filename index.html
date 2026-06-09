@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html class="light" lang="ko"><head>
+<html class="light scroll-smooth" lang="ko"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 
@@ -91,183 +91,180 @@
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet" crossorigin="anonymous"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet" crossorigin="anonymous"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" crossorigin="anonymous"/>
 <script id="tailwind-config">
-        tailwind.config = {
-          darkMode: "class",
-          theme: {
-            extend: {
-              "colors": {
-                      "on-error": "#ffffff",
-                      "inverse-surface": "#303031",
-                      "surface": "#fbf9f9",
-                      "primary-container": "#1c1b1b",
-                      "on-primary-fixed": "#1c1b1b",
-                      "tertiary-fixed-dim": "#c5c7c8",
-                      "surface-container-low": "#f5f3f3",
-                      "secondary-fixed-dim": "#e9c176",
-                      "on-tertiary": "#ffffff",
-                      "on-secondary": "#ffffff",
-                      "surface-container-high": "#e9e8e7",
-                      "surface-tint": "#5f5e5e",
-                      "tertiary": "#000000",
-                      "surface-container-highest": "#e4e2e2",
-                      "tertiary-fixed": "#e1e3e4",
-                      "surface-container": "#efeded",
-                      "surface-bright": "#fbf9f9",
-                      "on-tertiary-fixed-variant": "#454748",
-                      "on-tertiary-container": "#828485",
-                      "error": "#ba1a1a",
-                      "primary-fixed-dim": "#c8c6c5",
-                      "on-secondary-fixed": "#261900",
-                      "on-primary-fixed-variant": "#474746",
-                      "on-error-container": "#93000a",
-                      "on-tertiary-fixed": "#191c1d",
-                      "secondary-container": "#fed488",
-                      "tertiary-container": "#191c1d",
-                      "secondary": "#775a19",
-                      "on-surface": "#1b1c1c",
-                      "primary-fixed": "#e5e2e1",
-                      "surface-container-lowest": "#ffffff",
-                      "on-primary-container": "#858383",
-                      "background": "#fbf9f9",
-                      "on-secondary-container": "#785a1a",
-                      "on-secondary-fixed-variant": "#5d4201",
-                      "inverse-on-surface": "#f2f0f0",
-                      "outline-variant": "#c4c7c7",
-                      "primary": "#000000",
-                      "secondary-fixed": "#ffdea5",
-                      "error-container": "#ffdad6",
-                      "inverse-primary": "#c8c6c5",
-                      "surface-variant": "#e4e2e2",
-                      "on-surface-variant": "#444748",
-                      "on-primary": "#ffffff",
-                      "surface-dim": "#dbdad9",
-                      "on-background": "#1b1c1c",
-                      "outline": "#747878"
-              },
-              "borderRadius": {
-                      "DEFAULT": "0.125rem",
-                      "lg": "0.25rem",
-                      "xl": "0.5rem",
-                      "full": "0.75rem"
-              },
-              "spacing": {
-                      "gutter-desktop": "32px",
-                      "base": "8px",
-                      "max-width": "1280px",
-                      "margin-desktop": "64px",
-                      "margin-mobile": "24px",
-                      "gutter-mobile": "16px",
-                      "section-padding-desktop": "120px",
-                      "section-padding-mobile": "80px"
-              },
-              "fontFamily": {
-                      "display-lg": [
-                              "Bodoni Moda"
-                      ],
-                      "headline-lg-mobile": [
-                              "Bodoni Moda"
-                      ],
-                      "label-sm": [
-                              "Manrope"
-                      ],
-                      "label-md": [
-                              "Manrope"
-                      ],
-                      "headline-lg": [
-                              "Bodoni Moda"
-                      ],
-                      "body-lg": [
-                              "Manrope"
-                      ],
-                      "body-md": [
-                              "Manrope"
-                      ],
-                      "headline-md": [
-                              "Bodoni Moda"
-                      ]
-              },
-              "fontSize": {
-                      "display-lg": [
-                              "64px",
-                              {
-                                      "lineHeight": "1.1",
-                                      "letterSpacing": "-0.02em",
-                                      "fontWeight": "600"
-                              }
-                      ],
-                      "headline-lg-mobile": [
-                              "32px",
-                              {
-                                      "lineHeight": "1.2",
-                                      "fontWeight": "500"
-                              }
-                      ],
-                      "label-sm": [
-                              "12px",
-                              {
-                                      "lineHeight": "1.2",
-                                      "fontWeight": "500"
-                              }
-                      ],
-                      "label-md": [
-                              "14px",
-                              {
-                                      "lineHeight": "1.2",
-                                      "letterSpacing": "0.05em",
-                                      "fontWeight": "600"
-                              }
-                      ],
-                      "headline-lg": [
-                              "40px",
-                              {
-                                      "lineHeight": "1.2",
-                                      "fontWeight": "500"
-                              }
-                      ],
-                      "body-lg": [
-                              "18px",
-                              {
-                                      "lineHeight": "1.6",
-                                      "fontWeight": "400"
-                              }
-                      ],
-                      "body-md": [
-                              "16px",
-                              {
-                                      "lineHeight": "1.5",
-                                      "fontWeight": "400"
-                              }
-                      ],
-                      "headline-md": [
-                              "28px",
-                              {
-                                      "lineHeight": "1.3",
-                                      "fontWeight": "500"
-                              }
-                      ]
-              }
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed": "#e2e2e2",
+                    "primary-fixed-dim": "#ffb59a",
+                    "outline-variant": "#e4beb1",
+                    "on-surface-variant": "#5b4137",
+                    "surface-container-highest": "#e2e2e2",
+                    "on-primary-fixed": "#370e00",
+                    "error": "#ba1a1a",
+                    "surface-tint": "#a73a00",
+                    "tertiary": "#5e5e5e",
+                    "on-primary-fixed-variant": "#802a00",
+                    "secondary-fixed-dim": "#ffb68f",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-fixed-variant": "#6d3919",
+                    "on-background": "#1a1c1c",
+                    "primary": "#a73a00",
+                    "on-tertiary-fixed": "#1b1b1b",
+                    "secondary-container": "#feb289",
+                    "on-tertiary-fixed-variant": "#474747",
+                    "secondary-fixed": "#ffdbca",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-dim": "#dadada",
+                    "tertiary-fixed-dim": "#c6c6c6",
+                    "surface-bright": "#f9f9f9",
+                    "on-error": "#ffffff",
+                    "inverse-primary": "#ffb59a",
+                    "on-primary": "#ffffff",
+                    "surface-container-low": "#f3f3f4",
+                    "inverse-on-surface": "#f0f1f1",
+                    "on-secondary-container": "#794222",
+                    "on-secondary-fixed": "#331200",
+                    "surface": "#f9f9f9",
+                    "inverse-surface": "#2f3131",
+                    "on-primary-container": "#521800",
+                    "on-secondary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "outline": "#8f7065",
+                    "primary-container": "#ff5c00",
+                    "surface-container-high": "#e8e8e8",
+                    "tertiary-container": "#929292",
+                    "background": "#f9f9f9",
+                    "primary-fixed": "#ffdbce",
+                    "error-container": "#ffdad6",
+                    "surface-variant": "#e2e2e2",
+                    "on-surface": "#1a1c1c",
+                    "secondary": "#89502e",
+                    "on-tertiary-container": "#2b2b2b",
+                    "surface-container": "#eeeeee"
             },
-          }
-        }
-      </script>
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "container-padding-desktop": "40px",
+                    "section-gap": "48px",
+                    "gutter": "16px",
+                    "container-padding-mobile": "20px",
+                    "gutter-desktop": "32px",
+                    "base": "8px",
+                    "max-width": "1280px",
+                    "margin-desktop": "64px",
+                    "margin-mobile": "24px",
+                    "gutter-mobile": "16px",
+                    "section-padding-desktop": "120px",
+                    "section-padding-mobile": "48px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "label-bold": ["Plus Jakarta Sans"],
+                    "label-md": ["Plus Jakarta Sans"],
+                    "label-sm": ["Plus Jakarta Sans"],
+                    "headline-lg": ["Plus Jakarta Sans"],
+                    "headline-lg-mobile": ["Plus Jakarta Sans"],
+                    "headline-md": ["Plus Jakarta Sans"],
+                    "display-lg": ["Plus Jakarta Sans"],
+                    "stats-number": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-bold": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                    "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "label-sm": ["12px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "stats-number": ["36px", {"lineHeight": "1.0", "fontWeight": "800"}]
+            }
+          },
+        },
+      }
+    </script>
 <style>
         .material-symbols-outlined {
-          font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
         .material-symbols-outlined.fill {
-            font-variation-settings: 'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
-        html {
-            scroll-behavior: smooth;
+        /* Hero base — soft warm canvas that the flowing mesh sits on */
+        .vitality-gradient {
+            position: relative;
+            background: #fde7db;
+            isolation: isolate;
         }
-        body {
-            background-color: theme('colors.background');
-            color: theme('colors.on-background');
+        /* Gemini / Apple-Health style flowing mesh gradient */
+        .aurora-mesh {
+            position: absolute;
+            inset: -30%;
+            z-index: 0;
+            pointer-events: none;
+            filter: blur(56px) saturate(1.2);
+            background:
+                radial-gradient(28% 30% at 24% 28%, #ff5c00 0%, rgba(255, 92, 0, 0) 60%),
+                radial-gradient(26% 28% at 76% 22%, #ff6f91 0%, rgba(255, 111, 145, 0) 62%),
+                radial-gradient(32% 32% at 64% 70%, #ffd36e 0%, rgba(255, 211, 110, 0) 60%),
+                radial-gradient(30% 30% at 28% 74%, #ff8a3d 0%, rgba(255, 138, 61, 0) 60%),
+                radial-gradient(44% 44% at 50% 48%, #ffb59a 0%, rgba(255, 181, 154, 0) 70%);
+            background-repeat: no-repeat;
+            will-change: transform;
+            animation: mesh-flow 18s ease-in-out infinite alternate;
         }
-      </style>
+        @keyframes mesh-flow {
+            0%   { transform: translate3d(0, 0, 0) rotate(0deg) scale(1.05); }
+            33%  { transform: translate3d(2.5%, -3%, 0) rotate(5deg) scale(1.14); }
+            66%  { transform: translate3d(-3%, 2.5%, 0) rotate(-4deg) scale(1.09); }
+            100% { transform: translate3d(1.5%, 3.5%, 0) rotate(3deg) scale(1.12); }
+        }
+        /* Readability + seamless blend into the page below */
+        .vitality-gradient::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            pointer-events: none;
+            background: linear-gradient(180deg, rgba(253, 231, 219, 0.10) 0%, rgba(255, 255, 255, 0) 45%, rgba(249, 249, 249, 0.55) 86%, #f9f9f9 100%);
+        }
+        .parallax-orb {
+            z-index: 0;
+            will-change: transform;
+            transition: transform 0.12s linear;
+        }
+        /* Hide scrollbars on swipe carousels */
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        @media (prefers-reduced-motion: reduce) {
+            .aurora-mesh { animation: none; }
+            .parallax-orb { transition: none; }
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(242, 242, 247, 0.5);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
+        }
+        .progress-ring-circle {
+            transition: stroke-dashoffset 0.35s, stroke-width 0.2s;
+            transform: rotate(-90deg);
+            transform-origin: 50% 50%;
+        }
+    </style>
 
 <!-- Microsoft Clarity -->
 <script type="text/javascript">
@@ -287,34 +284,36 @@
   gtag('config', 'G-G0WSZX6906');
 </script>
 </head>
-<body class="antialiased min-h-screen flex flex-col selection:bg-secondary-container selection:text-on-secondary-container overflow-x-hidden">
+<body class="bg-background text-on-surface antialiased min-h-screen flex flex-col selection:bg-primary-fixed selection:text-on-primary-fixed overflow-x-hidden">
 <!-- Top Navigation -->
-<nav class="fixed top-0 left-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/30">
-<div class="flex justify-between items-center px-gutter-desktop py-base h-[80px]">
-<div class="text-headline-md font-headline-md font-bold tracking-widest" style="color:#FF6B00;">
+<nav class="fixed top-0 left-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-outline-variant/20 shadow-sm">
+<div class="flex justify-between items-center w-full px-container-padding-mobile md:px-container-padding-desktop h-20 max-w-7xl mx-auto">
+<a href="#top" class="font-display-lg text-headline-md font-extrabold tracking-tighter text-primary">
             d_d GYM
-        </div>
-<div class="hidden md:flex gap-8 items-center">
-<a class="text-primary dark:text-primary border-b border-primary pb-1 font-label-md text-label-md" href="#why-premium">프리미엄의 이유</a>
-<a class="text-on-surface-variant dark:text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors duration-300" href="#price">가격</a>
-<a class="text-on-surface-variant dark:text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors duration-300" href="#reviews">후기</a>
-<a class="text-on-surface-variant dark:text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors duration-300" href="#contact">상담 신청</a>
+        </a>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-primary border-b-2 border-primary pb-1 font-label-bold text-label-bold transition-all duration-300" href="#why-premium">프리미엄의 이유</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-all duration-300" href="#management">통합 관리</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-all duration-300" href="#trainers">트레이너</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-all duration-300" href="#reviews">후기</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-all duration-300" href="#contact">상담 신청</a>
 </div>
-<a href="#contact" class="hidden md:inline-flex items-center justify-center bg-secondary text-on-secondary px-6 py-3 font-label-md text-label-md tracking-wider hover:bg-secondary/90 transition-colors duration-300">
+<a href="#contact" class="hidden md:inline-flex items-center justify-center bg-primary-container text-on-primary hover:opacity-90 active:scale-95 transition-all duration-300 rounded-full px-8 py-3 font-label-bold text-label-bold">
             지금 가입하기
         </a>
-<button id="mobile-menu-toggle" class="md:hidden text-on-surface" aria-label="메뉴 열기/닫기" aria-expanded="false" aria-controls="mobile-menu">
+<button id="mobile-menu-toggle" class="md:hidden text-on-surface p-2" aria-label="메뉴 열기/닫기" aria-expanded="false" aria-controls="mobile-menu">
 <span id="mobile-menu-icon" class="material-symbols-outlined text-2xl">menu</span>
 </button>
 </div>
 <!-- Mobile menu -->
-<div id="mobile-menu" class="hidden md:hidden border-t border-outline-variant/30 bg-surface/95 backdrop-blur-md">
-<div class="flex flex-col px-gutter-mobile py-4 gap-4">
-<a class="text-primary font-label-md text-label-md py-2" href="#why-premium">프리미엄의 이유</a>
-<a class="text-on-surface-variant font-label-md text-label-md py-2 hover:text-primary transition-colors duration-300" href="#price">가격</a>
+<div id="mobile-menu" class="hidden md:hidden border-t border-outline-variant/20 bg-surface/95 backdrop-blur-xl">
+<div class="flex flex-col px-container-padding-mobile py-4 gap-4">
+<a class="text-primary font-label-bold text-label-bold py-2" href="#why-premium">프리미엄의 이유</a>
+<a class="text-on-surface-variant font-label-md text-label-md py-2 hover:text-primary transition-colors duration-300" href="#management">통합 관리</a>
+<a class="text-on-surface-variant font-label-md text-label-md py-2 hover:text-primary transition-colors duration-300" href="#trainers">트레이너</a>
 <a class="text-on-surface-variant font-label-md text-label-md py-2 hover:text-primary transition-colors duration-300" href="#reviews">후기</a>
 <a class="text-on-surface-variant font-label-md text-label-md py-2 hover:text-primary transition-colors duration-300" href="#contact">상담 신청</a>
-<a href="#contact" class="mt-2 inline-flex items-center justify-center bg-secondary text-on-secondary px-6 py-3 font-label-md text-label-md tracking-wider hover:bg-secondary/90 transition-colors duration-300">
+<a href="#contact" class="mt-2 inline-flex items-center justify-center bg-primary-container text-on-primary rounded-full px-6 py-3 font-label-bold text-label-bold hover:opacity-90 transition-all duration-300">
             지금 가입하기
         </a>
 </div>
@@ -346,270 +345,273 @@
     });
 })();
 </script>
-<main class="flex-grow pt-[80px]">
+<main id="top" class="flex-grow pt-20">
 <!-- Hero Section -->
-<section class="min-h-[870px] flex items-center justify-center px-gutter-mobile md:px-gutter-desktop max-w-max-width mx-auto py-section-padding-mobile md:py-section-padding-desktop">
-<div class="text-center max-w-4xl mx-auto flex flex-col items-center">
-<h1 class="font-display-lg text-display-lg text-primary mb-8 leading-tight">
-                    하루 커피 한 잔 값으로,<br/>내 몸에 평생 남는 건강을 투자하세요!
-                </h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-2xl mx-auto">
-                    <span class="font-bold" style="color:#FF6B00;">d_d GYM</span>은 프라이빗한 공간, 검증된 트레이너, 그리고 진심 어린 동기부여로 회원님의 운동 여정을 끝까지 완주하게 만드는 프리미엄 PT 전문 헬스장입니다.
+<section class="vitality-gradient min-h-[88vh] flex flex-col justify-center items-center text-center px-container-padding-mobile md:px-container-padding-desktop py-16 sm:py-24 relative overflow-hidden">
+<!-- Flowing mesh gradient (parallax-driven) -->
+<div class="parallax-orb aurora-wrap absolute inset-0" data-depth="12" aria-hidden="true"><div class="aurora-mesh"></div></div>
+<!-- Motion-reactive accent blobs -->
+<div class="parallax-orb absolute -bottom-10 left-1/4 w-44 h-44 sm:w-56 sm:h-56 bg-[#ffd36e]/30 blur-[80px] rounded-full" data-depth="30"></div>
+<div class="parallax-orb absolute top-16 -right-10 w-56 h-56 sm:w-72 sm:h-72 bg-[#ff6f91]/25 blur-[90px] rounded-full" data-depth="44"></div>
+<div class="max-w-4xl z-10 space-y-6">
+<h1 class="font-display-lg text-[40px] sm:text-[52px] md:text-[72px] leading-[1.08] tracking-tight text-on-primary-container">
+                    최고의 나를 위해<br/>
+<span class="text-white drop-shadow-sm">설계된 트레이닝</span>
+</h1>
+<p class="font-body-lg text-body-md sm:text-body-lg md:text-xl text-on-surface-variant/80 max-w-2xl mx-auto">
+                    데이터 기반 1:1 정밀 코칭.
+                    프라이빗한 공간, 검증된 트레이너, 진심 어린 동기부여로 회원님의 운동 여정을 끝까지 완주하게 만듭니다.
                 </p>
-<div class="flex flex-col sm:flex-row gap-4 items-center justify-center">
-<a href="#contact" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-secondary text-on-secondary font-label-md text-label-md tracking-wider hover:bg-secondary/90 transition-colors duration-300">
-                        2,900원부터 시작하기
+<div class="pt-6 sm:pt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-stretch sm:items-center">
+<a href="#contact" class="w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 bg-primary-container text-on-primary font-label-bold text-label-bold rounded-full shadow-lg hover:shadow-xl active:scale-95 transition-all">무료 상담 시작하기</a>
+<a href="#why-premium" class="w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 bg-white/20 backdrop-blur-md border border-white/30 text-on-surface font-label-bold text-label-bold rounded-full hover:bg-white/40 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">arrow_downward</span>
+                        더 알아보기
                     </a>
-<a class="font-label-md text-label-md text-primary border-b border-primary pb-1 hover:text-secondary hover:border-secondary transition-colors duration-300 mt-4 sm:mt-0" href="#price">
-                        가격 살펴보기
-                    </a>
+</div>
+</div>
+</section>
+<!-- Integrated Management (Bento Style) -->
+<section class="py-section-gap px-container-padding-mobile md:px-container-padding-desktop max-w-7xl mx-auto" id="management">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 md:mb-12 gap-6">
+<div class="max-w-xl">
+<h2 class="font-headline-lg text-headline-lg md:text-display-lg mb-4">통합 관리</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">단순히 운동만 시키지 않습니다. 회원님의 컨디션과 진척도를 데이터로 관리하고, 수업 안팎에서 꾸준히 동기를 부여하며 변화를 끝까지 책임집니다.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Large Feature Card -->
+<div class="md:col-span-8 glass-card rounded-[32px] p-6 md:p-12 relative overflow-hidden group">
+<div class="relative z-10 flex flex-col h-full justify-between">
+<div>
+<div class="flex items-center gap-3 mb-6">
+<div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">monitoring</span>
+</div>
+<h3 class="font-headline-md text-headline-md">실시간 진척도 트래킹</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">매 수업마다 운동량과 회복 상태, 자세 변화를 기록하고 시각화합니다. 막연한 감이 아니라 데이터로 다음 스텝을 설계합니다.</p>
+</div>
+<div class="mt-8 sm:mt-12 flex flex-wrap gap-6 sm:gap-8 items-center">
+<div class="flex -space-x-4">
+<div class="w-20 h-20 sm:w-24 sm:h-24 relative">
+<svg class="w-full h-full" viewBox="0 0 100 100">
+<circle class="text-surface-container stroke-current" cx="50" cy="50" fill="transparent" r="40" stroke-width="10"></circle>
+<circle class="text-primary stroke-current progress-ring-circle" cx="50" cy="50" fill="transparent" r="40" stroke-linecap="round" stroke-width="10" style="stroke-dasharray: 251.2; stroke-dashoffset: 60;"></circle>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="font-stats-number text-label-bold text-primary">76%</span>
+</div>
+</div>
+<div class="w-20 h-20 sm:w-24 sm:h-24 relative">
+<svg class="w-full h-full" viewBox="0 0 100 100">
+<circle class="text-surface-container stroke-current" cx="50" cy="50" fill="transparent" r="40" stroke-width="10"></circle>
+<circle class="text-secondary stroke-current progress-ring-circle" cx="50" cy="50" fill="transparent" r="40" stroke-linecap="round" stroke-width="10" style="stroke-dasharray: 251.2; stroke-dashoffset: 120;"></circle>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="font-stats-number text-label-bold text-secondary">52%</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-bold text-label-bold text-on-surface-variant uppercase tracking-widest">이번 주 활동량</span>
+<span class="font-stats-number text-stats-number text-on-surface">1,482 <span class="text-body-md font-normal text-outline">kcal</span></span>
+</div>
+</div>
+</div>
+<div class="absolute top-0 right-0 w-1/3 h-full opacity-10 bg-gradient-to-l from-primary to-transparent pointer-events-none"></div>
+</div>
+<!-- Side Card -->
+<div class="md:col-span-4 rounded-[32px] overflow-hidden group relative min-h-[300px] bg-gradient-to-br from-primary to-secondary flex items-end p-8">
+<div class="absolute top-6 right-6 w-14 h-14 rounded-2xl bg-white/15 backdrop-blur-md flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-3xl">sync</span>
+</div>
+<div class="relative z-10">
+<span class="text-white/80 font-label-bold text-label-bold uppercase tracking-widest">맞춤 관리</span>
+<h4 class="text-white font-headline-md text-headline-md">자세 교정 &amp; 스케줄</h4>
+</div>
 </div>
 </div>
 </section>
 <!-- Value Proposition -->
 <section class="py-section-padding-mobile md:py-section-padding-desktop bg-surface-container-low" id="why-premium">
-<div class="px-gutter-mobile md:px-gutter-desktop max-w-max-width mx-auto">
-<div class="text-center mb-16 md:mb-24">
-<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4"><span class="font-bold" style="color:#FF6B00;">d_d GYM</span>의 기준</h2>
-<p class="font-body-md text-body-md text-on-surface-variant max-w-xl mx-auto">단순한 헬스장을 넘어, 회원님의 변화를 끝까지 책임지는 <span class="font-bold" style="color:#FF6B00;">d_d GYM</span>만의 세 가지 약속입니다.</p>
+<div class="px-container-padding-mobile md:px-container-padding-desktop max-w-7xl mx-auto">
+<div class="text-center mb-8 md:mb-24">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-4"><span class="text-primary-container font-bold">d_d GYM</span>의 기준</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl mx-auto">단순한 헬스장을 넘어, 회원님의 변화를 끝까지 책임지는 <span class="text-primary-container font-bold">d_d GYM</span>만의 세 가지 약속입니다.</p>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+<div class="md:hidden flex items-center justify-center gap-1.5 mb-5 text-on-surface-variant/60">
+<span class="material-symbols-outlined text-lg">swipe</span>
+<span class="font-label-sm text-label-sm">옆으로 밀어보세요</span>
+</div>
+<div class="flex md:grid md:grid-cols-3 gap-4 md:gap-12 overflow-x-auto md:overflow-visible snap-x snap-mandatory no-scrollbar -mx-5 px-5 md:mx-0 md:px-0 pb-2 md:pb-0">
 <!-- Feature 1 -->
-<div class="flex flex-col items-center text-center group">
-<div class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center mb-6 group-hover:bg-secondary-container transition-colors duration-300">
-<span class="material-symbols-outlined text-3xl text-primary group-hover:text-on-secondary-container">door_front</span>
+<div class="snap-center shrink-0 w-[82%] sm:w-[48%] md:w-auto glass-card rounded-[32px] p-8 flex flex-col items-center text-center group hover:shadow-xl transition-all duration-500">
+<div class="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors duration-300">
+<span class="material-symbols-outlined text-3xl">door_front</span>
 </div>
-<h3 class="font-headline-md text-headline-md text-primary mb-3">프라이빗한 공간</h3>
+<h3 class="font-headline-md text-headline-md mb-3">프라이빗한 공간</h3>
 <p class="font-body-md text-body-md text-on-surface-variant">인원수 제한으로 집중된 트레이닝 분위기를 만듭니다. 붐비지 않는 공간에서 오롯이 나의 운동에만 몰입할 수 있습니다.</p>
 </div>
 <!-- Feature 2 -->
-<div class="flex flex-col items-center text-center group">
-<div class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center mb-6 group-hover:bg-secondary-container transition-colors duration-300">
-<span class="material-symbols-outlined text-3xl text-primary group-hover:text-on-secondary-container">favorite</span>
+<div class="snap-center shrink-0 w-[82%] sm:w-[48%] md:w-auto glass-card rounded-[32px] p-8 flex flex-col items-center text-center group hover:shadow-xl transition-all duration-500">
+<div class="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors duration-300">
+<span class="material-symbols-outlined text-3xl">favorite</span>
 </div>
-<h3 class="font-headline-md text-headline-md text-primary mb-3">의지박약도 완주하게 만드는 심리적 동기부여</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">단순히 숫자만 세어주는 로봇 같은 트레이너가 아닙니다. 매 수업 회원님의 컨디션과 멘탈 상태를 세심하게 체크하고, 운동이 삶의 즐거운 습관이 될 때까지 진심을 다해 소통하고 이끌어 드립니다.</p>
+<h3 class="font-headline-md text-headline-md mb-3">끝까지 완주하게 만드는 동기부여</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">숫자만 세는 트레이너가 아닙니다. 매 수업 회원님의 컨디션과 멘탈을 세심하게 체크하고, 운동이 즐거운 습관이 될 때까지 진심으로 소통하며 이끌어 드립니다.</p>
 </div>
 <!-- Feature 3 -->
-<div class="flex flex-col items-center text-center group">
-<div class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center mb-6 group-hover:bg-secondary-container transition-colors duration-300">
-<span class="material-symbols-outlined text-3xl text-primary group-hover:text-on-secondary-container">verified</span>
+<div class="snap-center shrink-0 w-[82%] sm:w-[48%] md:w-auto glass-card rounded-[32px] p-8 flex flex-col items-center text-center group hover:shadow-xl transition-all duration-500">
+<div class="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors duration-300">
+<span class="material-symbols-outlined text-3xl">verified</span>
 </div>
-<h3 class="font-headline-md text-headline-md text-primary mb-3">검증된 트레이너</h3>
+<h3 class="font-headline-md text-headline-md mb-3">검증된 트레이너</h3>
 <p class="font-body-md text-body-md text-on-surface-variant">물리치료사 면허 보유, 전 국가대표 선수 트레이너 등 검증된 전문가들이 안전하고 체계적인 트레이닝을 제공합니다.</p>
 </div>
 </div>
 </div>
 </section>
-<!-- Pricing Focus -->
-<section class="py-section-padding-mobile md:py-section-padding-desktop" id="price">
-<div class="px-gutter-mobile md:px-gutter-desktop max-w-max-width mx-auto">
-<div class="text-center mb-16 md:mb-24 max-w-3xl mx-auto">
-<span class="font-label-md text-label-md tracking-[0.2em] text-secondary mb-4 block">투명한 가격</span>
-<h2 class="font-display-lg text-display-lg text-primary mb-6 leading-tight">하루 커피 한 잔.<br/>그리고 내 몸을 위한 투자.</h2>
-<p class="font-body-md text-body-md text-on-surface-variant">목표와 라이프스타일에 맞는 멤버십을 선택하세요. 모든 플랜은 부가세(VAT)가 포함된 가격입니다.</p>
+<!-- Trainer Introduction -->
+<section class="py-section-gap px-container-padding-mobile md:px-container-padding-desktop max-w-7xl mx-auto" id="trainers">
+<div class="text-center mb-8 md:mb-16">
+<h2 class="font-headline-lg text-headline-lg md:text-display-lg mb-4">퍼포먼스 아키텍트</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">디디짐의 코치는 단순한 트레이너가 아니라, 회원 한 분 한 분에게 최적화된 변화를 설계하는 퍼포먼스 전문가입니다.</p>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
-<!-- BASIC -->
-<div class="bg-surface p-8 md:p-10 border border-outline-variant/30 relative flex flex-col">
-<div class="mb-6">
-<p class="font-label-md text-label-md text-on-surface-variant tracking-[0.2em] mb-2">BASIC · 베이직</p>
-<p class="font-body-md text-body-md text-on-surface-variant italic">프라이빗 공간에서의 독립적인 운동</p>
+<div class="md:hidden flex items-center justify-center gap-1.5 mb-5 text-on-surface-variant/60">
+<span class="material-symbols-outlined text-lg">swipe</span>
+<span class="font-label-sm text-label-sm">옆으로 밀어보세요</span>
 </div>
-<div class="mb-6 border-b border-outline-variant/30 pb-6">
-<div class="flex items-baseline gap-2">
-<span class="font-display-lg text-display-lg text-primary">2,900</span>
-<span class="font-body-md text-body-md text-on-surface-variant">원 / 일</span>
+<div class="flex md:grid md:grid-cols-2 gap-4 md:gap-gutter overflow-x-auto md:overflow-visible snap-x snap-mandatory no-scrollbar -mx-5 px-5 md:mx-0 md:px-0 pb-2 md:pb-0">
+<!-- Trainer 1 -->
+<div class="snap-center shrink-0 w-[88%] md:w-auto group glass-card rounded-[32px] p-6 flex flex-col md:flex-row gap-8 items-start md:items-center hover:shadow-xl transition-all duration-500">
+<div class="w-full md:w-56 h-64 rounded-2xl overflow-hidden shrink-0 bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-7xl">fitness_center</span>
 </div>
-<p class="font-label-sm text-label-sm text-on-surface-variant mt-2">일일 환산 가격 · VAT 포함</p>
+<div class="flex-grow space-y-4">
+<span class="text-primary font-label-bold text-label-bold uppercase tracking-widest">시니어 코치</span>
+<h3 class="font-headline-md text-headline-md">근력 &amp; 자세 교정 전문</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">근비대와 신경근 적응 전문. 안전한 자세 설계와 체계적인 프로그래밍으로 확실한 체형 변화를 만들어 갑니다.</p>
+<div class="flex flex-wrap gap-2 pt-2">
+<span class="px-3 py-1 bg-surface-container rounded-full font-label-bold text-[12px] uppercase">근력</span>
+<span class="px-3 py-1 bg-surface-container rounded-full font-label-bold text-[12px] uppercase">가동성</span>
 </div>
-<div class="mb-6">
-<p class="font-label-sm text-label-sm tracking-wider text-on-surface-variant mb-2">추천 대상</p>
-<p class="font-body-md text-body-md text-on-surface">어느 정도 운동 기구 사용법을 알지만, 붐비는 헬스장이 싫고 프리미엄 시설을 누리고 싶은 분</p>
 </div>
-<ul class="space-y-4 mb-10 flex-grow">
-<li class="flex items-start gap-4">
-<span class="material-symbols-outlined text-secondary mt-1">check</span>
-<span class="font-body-md text-body-md text-on-surface">1회 1:1 PT</span>
-</li>
-<li class="flex items-start gap-4">
-<span class="material-symbols-outlined text-secondary mt-1">check</span>
-<span class="font-body-md text-body-md text-on-surface">3개월 회원권</span>
-</li>
-<li class="flex items-start gap-4">
-<span class="material-symbols-outlined text-secondary mt-1">check</span>
-<span class="font-body-md text-body-md text-on-surface">부가세(VAT) 포함</span>
-</li>
-</ul>
-<button class="w-full px-8 py-4 bg-surface text-primary border border-primary font-label-md text-label-md tracking-wider hover:bg-primary hover:text-on-primary transition-colors duration-300">
-                            베이직 시작하기
-                        </button>
 </div>
-<!-- STANDARD (BEST) -->
-<div class="bg-primary p-8 md:p-10 relative flex flex-col md:-mt-6 md:mb-0 shadow-2xl">
-<div class="absolute top-0 left-0 right-0 bg-secondary text-on-secondary text-center py-2 font-label-md text-label-md tracking-[0.2em]">
-                            👑 BEST
-                        </div>
-<div class="mt-8 mb-6">
-<p class="font-label-md text-label-md text-secondary-fixed-dim tracking-[0.2em] mb-2">STANDARD · 스탠다드</p>
-<p class="font-body-md text-body-md text-on-primary/70 italic"><span class="font-bold" style="color:#FF6B00;">d_d GYM</span>의 시그니처 1:1 케어</p>
+<!-- Trainer 2 -->
+<div class="snap-center shrink-0 w-[88%] md:w-auto group glass-card rounded-[32px] p-6 flex flex-col md:flex-row gap-8 items-start md:items-center hover:shadow-xl transition-all duration-500">
+<div class="w-full md:w-56 h-64 rounded-2xl overflow-hidden shrink-0 bg-gradient-to-br from-secondary to-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-7xl">directions_run</span>
 </div>
-<div class="mb-6 border-b border-on-primary/20 pb-6">
-<div class="flex items-baseline gap-2">
-<span class="font-display-lg text-display-lg text-on-primary">4,900</span>
-<span class="font-body-md text-body-md text-on-primary/70">원 / 일</span>
+<div class="flex-grow space-y-4">
+<span class="text-primary font-label-bold text-label-bold uppercase tracking-widest">퍼포먼스 리드</span>
+<h3 class="font-headline-md text-headline-md">체력 &amp; 컨디셔닝 전문</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">메트콘과 컨디셔닝 전문. 회복과 지속 가능성에 초점을 맞춰 오래 건강하게 운동하는 몸을 만듭니다.</p>
+<div class="flex flex-wrap gap-2 pt-2">
+<span class="px-3 py-1 bg-surface-container rounded-full font-label-bold text-[12px] uppercase">HIIT</span>
+<span class="px-3 py-1 bg-surface-container rounded-full font-label-bold text-[12px] uppercase">회복</span>
 </div>
-<p class="font-label-sm text-label-sm text-on-primary/60 mt-2">일일 환산 가격 · VAT 포함</p>
-</div>
-<div class="mb-6">
-<p class="font-label-sm text-label-sm tracking-wider text-on-primary/60 mb-2">추천 대상</p>
-<p class="font-body-md text-body-md text-on-primary">전문가의 체계적인 티칭을 통해 확실한 체형 변화와 올바른 운동 습관을 만들고 싶은 분</p>
-</div>
-<ul class="space-y-4 mb-10 flex-grow">
-<li class="flex items-start gap-4">
-<span class="material-symbols-outlined text-secondary mt-1">check</span>
-<span class="font-body-md text-body-md text-on-primary">10회 1:1 PT</span>
-</li>
-<li class="flex items-start gap-4">
-<span class="material-symbols-outlined text-secondary mt-1">check</span>
-<span class="font-body-md text-body-md text-on-primary">6개월 회원권</span>
-</li>
-<li class="flex items-start gap-4">
-<span class="material-symbols-outlined text-secondary mt-1">check</span>
-<span class="font-body-md text-body-md text-on-primary">개인 라커 무료 제공</span>
-</li>
-<li class="flex items-start gap-4">
-<span class="material-symbols-outlined text-secondary mt-1">check</span>
-<span class="font-body-md text-body-md text-on-primary">부가세(VAT) 포함</span>
-</li>
-</ul>
-<button class="w-full px-8 py-4 bg-secondary text-on-secondary font-label-md text-label-md tracking-wider hover:bg-secondary/90 transition-colors duration-300">
-                            스탠다드 선택하기
-                        </button>
-</div>
-<!-- PRO -->
-<div class="bg-surface p-8 md:p-10 border border-outline-variant/30 relative flex flex-col">
-<div class="mb-6">
-<p class="font-label-md text-label-md text-on-surface-variant tracking-[0.2em] mb-2">PRO · 프로</p>
-<p class="font-body-md text-body-md text-on-surface-variant italic">확실한 목표 달성을 위한 VIP 페이스메이커</p>
-</div>
-<div class="mb-6 border-b border-outline-variant/30 pb-6">
-<div class="flex items-baseline gap-2">
-<span class="font-display-lg text-display-lg text-primary">9,900</span>
-<span class="font-body-md text-body-md text-on-surface-variant">원 / 일</span>
-</div>
-<p class="font-label-sm text-label-sm text-on-surface-variant mt-2">일일 환산 가격 · VAT 포함</p>
-</div>
-<div class="mb-6">
-<p class="font-label-sm text-label-sm tracking-wider text-on-surface-variant mb-2">추천 대상</p>
-<p class="font-body-md text-body-md text-on-surface">바디프로필, 웨딩 준비, 장기간 체중조절 등 확실한 목표가 있는 분</p>
-</div>
-<ul class="space-y-4 mb-10 flex-grow">
-<li class="flex items-start gap-4">
-<span class="material-symbols-outlined text-secondary mt-1">check</span>
-<span class="font-body-md text-body-md text-on-surface">40회 1:1 PT</span>
-</li>
-<li class="flex items-start gap-4">
-<span class="material-symbols-outlined text-secondary mt-1">check</span>
-<span class="font-body-md text-body-md text-on-surface">9개월 회원권</span>
-</li>
-<li class="flex items-start gap-4">
-<span class="material-symbols-outlined text-secondary mt-1">check</span>
-<span class="font-body-md text-body-md text-on-surface">개인 라커 무료 제공</span>
-</li>
-<li class="flex items-start gap-4">
-<span class="material-symbols-outlined text-secondary mt-1">check</span>
-<span class="font-body-md text-body-md text-on-surface">부가세(VAT) 포함</span>
-</li>
-</ul>
-<button class="w-full px-8 py-4 bg-surface text-primary border border-primary font-label-md text-label-md tracking-wider hover:bg-primary hover:text-on-primary transition-colors duration-300">
-                            프로로 시작하기
-                        </button>
 </div>
 </div>
 </div>
 </section>
 <!-- Trust / Reviews -->
-<section class="py-section-padding-mobile md:py-section-padding-desktop bg-surface-container-highest" id="reviews">
-<div class="px-gutter-mobile md:px-gutter-desktop max-w-max-width mx-auto">
-<div class="text-center mb-16">
-<span class="material-symbols-outlined text-4xl text-secondary mb-4">format_quote</span>
-<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary">회원 후기</h2>
+<section class="py-section-gap px-container-padding-mobile md:px-container-padding-desktop max-w-7xl mx-auto" id="reviews">
+<div class="text-center mb-8 md:mb-16">
+<span class="material-symbols-outlined text-4xl text-primary mb-4">format_quote</span>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg">회원 후기</h2>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+<div class="md:hidden flex items-center justify-center gap-1.5 mb-5 text-on-surface-variant/60">
+<span class="material-symbols-outlined text-lg">swipe</span>
+<span class="font-label-sm text-label-sm">옆으로 밀어보세요</span>
+</div>
+<div class="flex md:grid md:grid-cols-2 gap-4 md:gap-gutter overflow-x-auto md:overflow-visible snap-x snap-mandatory no-scrollbar -mx-5 px-5 md:mx-auto md:px-0 md:max-w-5xl pb-2 md:pb-0">
 <!-- Review 1 -->
-<div class="bg-surface p-8 md:p-10 border border-outline-variant/30 flex flex-col">
+<div class="snap-center shrink-0 w-[85%] md:w-auto glass-card p-8 md:p-10 rounded-[32px] flex flex-col">
 <p class="font-body-md text-body-md text-on-surface leading-relaxed mb-8 flex-grow">
                         "제가 여기저기 피티를 받아봤는데 사전에 개개인의 컨디션 체크해주시면서 체계적으로 운동 스케줄 짜주시고 이렇게 꼼꼼하게 자세 봐주시는건 처음인거 같아 디디짐으로 정착하게 되었어요-! 어느부분의 근육을 사용해야하는지 정확하게 잡아주셔서 어떻게 내 몸을 움직여야하는지 쉽게 이해한거 같아요!! 덕분에 운동에 재미를 쉽게 붙여서 점점 달라지는 제 몸이 기대가 됩니당. 대표님 선생님들 정말 친절하셔서 부담없이 물어볼수 있는것도 너무 좋았던거같아요ㅎㅎ 정말 운동맛집 디디짐 최고에요 앞으로도 잘부탁드립니다-! 의정부 주민분들 고민말고 진짜 한번만 받아보세요."
                     </p>
-<div class="flex items-center justify-between border-t border-outline-variant/30 pt-4">
-<p class="font-label-md text-label-md text-primary">엉엉2</p>
+<div class="flex items-center justify-between border-t border-outline-variant/40 pt-4">
+<p class="font-label-bold text-label-bold text-primary">엉엉2</p>
 <p class="font-label-sm text-label-sm text-on-surface-variant">26.03.25.수</p>
 </div>
 </div>
 <!-- Review 2 -->
-<div class="bg-surface p-8 md:p-10 border border-outline-variant/30 flex flex-col">
+<div class="snap-center shrink-0 w-[85%] md:w-auto glass-card p-8 md:p-10 rounded-[32px] flex flex-col">
 <p class="font-body-md text-body-md text-on-surface leading-relaxed mb-8 flex-grow">
                         "상담도 친절하게 잘해주시구 필요한 운동법만 전문적으로 쏙쏙 알려주십니다 강추!! 감사합니다 선생님:)"
                     </p>
-<div class="flex items-center justify-between border-t border-outline-variant/30 pt-4">
-<p class="font-label-md text-label-md text-primary">두비두바95</p>
+<div class="flex items-center justify-between border-t border-outline-variant/40 pt-4">
+<p class="font-label-bold text-label-bold text-primary">두비두바95</p>
 <p class="font-label-sm text-label-sm text-on-surface-variant">26.05.07.목</p>
-</div>
 </div>
 </div>
 </div>
 </section>
 <!-- Contact / Consultation Form -->
-<section class="py-section-padding-mobile md:py-section-padding-desktop bg-surface" id="contact">
-<div class="px-gutter-mobile md:px-gutter-desktop max-w-max-width mx-auto">
+<section class="py-section-padding-mobile md:py-section-padding-desktop bg-surface-container-low" id="contact">
+<div class="px-container-padding-mobile md:px-container-padding-desktop max-w-7xl mx-auto">
 <div class="max-w-2xl mx-auto">
 <div class="text-center mb-12">
-<span class="font-label-md text-label-md tracking-[0.2em] text-secondary mb-4 block">무료 상담</span>
-<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4">지금 바로 상담 신청하세요</h2>
+<span class="font-label-bold text-label-bold tracking-[0.2em] text-primary mb-4 block uppercase">무료 상담</span>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-4">지금 바로 상담 신청하세요</h2>
 <p class="font-body-md text-body-md text-on-surface-variant">남겨주신 연락처로 빠르게 회신드립니다.</p>
 </div>
-<form id="contact-form" action="https://formspree.io/f/xwvznzez" method="POST" class="flex flex-col gap-6" novalidate>
+<form id="contact-form" action="https://formspree.io/f/xwvznzez" method="POST" class="glass-card rounded-[32px] p-8 md:p-10 flex flex-col gap-6" novalidate>
 <input type="hidden" name="_subject" value="디디짐 홈페이지 상담 신청"/>
 <div class="flex flex-col gap-2">
 <label for="name" class="font-label-md text-label-md text-primary">이름 <span class="text-error">*</span></label>
-<input type="text" id="name" name="name" required data-fs-field autocomplete="name" class="px-4 py-3 bg-surface border border-outline-variant text-on-surface focus:outline-none focus:border-primary transition-colors"/>
+<input type="text" id="name" name="name" required data-fs-field autocomplete="name" class="px-4 py-3 bg-surface border border-outline-variant rounded-xl text-on-surface focus:outline-none focus:border-primary transition-colors"/>
 <span data-fs-error="name" class="font-label-sm text-label-sm text-error"></span>
 </div>
 <div class="flex flex-col gap-2">
 <label for="phone" class="font-label-md text-label-md text-primary">연락처 <span class="text-error">*</span></label>
-<input type="tel" id="phone" name="phone" required data-fs-field autocomplete="tel" placeholder="010-0000-0000" class="px-4 py-3 bg-surface border border-outline-variant text-on-surface focus:outline-none focus:border-primary transition-colors"/>
+<input type="tel" id="phone" name="phone" required data-fs-field autocomplete="tel" placeholder="010-0000-0000" class="px-4 py-3 bg-surface border border-outline-variant rounded-xl text-on-surface focus:outline-none focus:border-primary transition-colors"/>
 <span data-fs-error="phone" class="font-label-sm text-label-sm text-error"></span>
 </div>
 <div class="flex flex-col gap-2">
 <label for="message" class="font-label-md text-label-md text-primary">문의 내용 (선택)</label>
-<textarea id="message" name="message" rows="4" data-fs-field placeholder="궁금한 점이나 운동 목표를 알려주세요." class="px-4 py-3 bg-surface border border-outline-variant text-on-surface focus:outline-none focus:border-primary transition-colors resize-none"></textarea>
+<textarea id="message" name="message" rows="4" data-fs-field placeholder="궁금한 점이나 운동 목표를 알려주세요." class="px-4 py-3 bg-surface border border-outline-variant rounded-xl text-on-surface focus:outline-none focus:border-primary transition-colors resize-none"></textarea>
 <span data-fs-error="message" class="font-label-sm text-label-sm text-error"></span>
 </div>
 <label class="flex items-start gap-3 cursor-pointer">
-<input type="checkbox" id="consent" name="consent" required value="동의함" class="mt-1 w-5 h-5 accent-secondary"/>
+<input type="checkbox" id="consent" name="consent" required value="동의함" class="mt-1 w-5 h-5 accent-primary"/>
 <span class="font-body-md text-body-md text-on-surface-variant">
 <button type="button" data-modal-open="privacy-modal" class="underline hover:text-primary">개인정보처리방침</button>에 동의합니다. (필수)
 </span>
 </label>
-<div data-fs-success hidden class="bg-secondary-container text-on-secondary-container px-4 py-3 font-body-md text-body-md">
+<div data-fs-success hidden class="bg-secondary-container text-on-secondary-container px-4 py-3 rounded-xl font-body-md text-body-md">
 신청이 정상적으로 접수되었습니다. 빠른 시일 내에 연락드리겠습니다.
 </div>
-<div data-fs-error hidden class="bg-error-container text-on-error-container px-4 py-3 font-body-md text-body-md">
+<div data-fs-error hidden class="bg-error-container text-on-error-container px-4 py-3 rounded-xl font-body-md text-body-md">
 전송에 실패했습니다. 잠시 후 다시 시도해 주세요.
 </div>
-<button type="submit" data-fs-submit-btn class="px-8 py-4 bg-secondary text-on-secondary font-label-md text-label-md tracking-wider hover:bg-secondary/90 transition-colors duration-300 disabled:opacity-60 disabled:cursor-not-allowed">
+<button type="submit" data-fs-submit-btn class="px-8 py-4 bg-primary-container text-on-primary rounded-full font-label-bold text-label-bold tracking-wider hover:opacity-90 active:scale-95 transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed">
 상담 신청하기
 </button>
 </form>
 </div>
 </div>
 </section>
+<!-- Final CTA -->
+<section class="py-section-gap px-container-padding-mobile md:px-container-padding-desktop max-w-7xl mx-auto text-center">
+<div class="bg-primary p-8 sm:p-12 md:p-24 rounded-[32px] md:rounded-[48px] text-white relative overflow-hidden">
+<div class="relative z-10 max-w-2xl mx-auto space-y-6 sm:space-y-8">
+<h2 class="font-display-lg text-[32px] sm:text-display-lg md:text-[56px] tracking-tighter leading-[1.1]">새로운 기준,<br/>지금 시작하세요</h2>
+<p class="font-body-lg text-body-md sm:text-body-lg opacity-90"><span class="text-primary-fixed-dim font-bold">d_d GYM</span>의 프라이빗 1:1 PT, 이번 분기 한정 슬롯이 열려 있습니다. 무료 상담으로 먼저 경험해 보세요.</p>
+<a href="#contact" class="inline-block w-full sm:w-auto bg-white text-primary px-8 sm:px-12 py-5 sm:py-6 rounded-full font-label-bold text-label-bold text-lg sm:text-xl hover:bg-opacity-90 active:scale-95 transition-all shadow-2xl">무료 상담 신청하기</a>
+</div>
+<!-- Visual Decoration -->
+<div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -mr-32 -mt-32"></div>
+<div class="absolute bottom-0 left-0 w-64 h-64 bg-on-primary-container/20 rounded-full blur-3xl -ml-32 -mb-32"></div>
+</div>
+</section>
 </main>
 <!-- Footer -->
-<footer class="w-full py-section-padding-desktop px-gutter-desktop flex flex-col md:flex-row justify-between items-start max-w-max-width mx-auto bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant/20">
+<footer class="w-full py-section-gap px-container-padding-mobile md:px-container-padding-desktop border-t border-outline-variant/30">
+<div class="flex flex-col md:flex-row justify-between items-start max-w-7xl mx-auto gap-gutter">
 <div class="mb-8 md:mb-0">
-<div class="text-headline-md font-headline-md font-bold mb-4" style="color:#FF6B00;">d_d GYM</div>
+<div class="font-display-lg text-headline-md font-extrabold tracking-tighter text-primary mb-4">d_d GYM</div>
 <p class="font-body-md text-body-md text-on-surface-variant max-w-xs">의정부시 의정로84, 대성빌딩 지하1층</p>
 </div>
 <div class="flex flex-col md:items-end">
@@ -620,14 +622,15 @@
 <a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-opacity duration-300 opacity-80 hover:opacity-100" href="https://talk.naver.com/W5IO7N" target="_blank" rel="noopener noreferrer">문의하기</a>
 </div>
 <p class="font-body-md text-body-md text-on-surface-variant opacity-60 text-xs tracking-wider">
-                © 2024 <span class="font-bold" style="color:#FF6B00;">d_d GYM</span> PRIVATE CLUB. ALL RIGHTS RESERVED.
+                © 2024 <span class="text-primary-container font-bold">d_d GYM</span> PRIVATE CLUB. ALL RIGHTS RESERVED.
             </p>
+</div>
 </div>
 </footer>
 <!-- Privacy Policy Modal -->
 <div id="privacy-modal" class="hidden fixed inset-0 z-[100] items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="privacy-modal-title">
 <div class="absolute inset-0 bg-on-surface/60 backdrop-blur-sm" data-modal-close="privacy-modal"></div>
-<div class="relative bg-surface w-full max-w-2xl max-h-[85vh] flex flex-col shadow-2xl border border-outline-variant/30">
+<div class="relative bg-surface w-full max-w-2xl max-h-[85vh] flex flex-col shadow-2xl rounded-[32px] border border-outline-variant/30 overflow-hidden">
 <div class="flex items-center justify-between px-6 md:px-8 py-5 border-b border-outline-variant/30">
 <h3 id="privacy-modal-title" class="font-headline-md text-headline-md text-primary">개인정보처리방침</h3>
 <button type="button" data-modal-close="privacy-modal" class="text-on-surface-variant hover:text-primary transition-colors" aria-label="닫기">
@@ -635,7 +638,7 @@
 </button>
 </div>
 <div class="overflow-y-auto px-6 md:px-8 py-6 space-y-4 font-body-md text-body-md text-on-surface">
-<p><span class="font-bold" style="color:#FF6B00;">디디짐</span>(이하 "회사")은 이용자의 개인정보를 중요시하며, 관련 법령을 준수하기 위해 다음과 같이 개인정보처리방침을 안내드립니다.</p>
+<p><span class="text-primary-container font-bold">디디짐</span>(이하 "회사")은 이용자의 개인정보를 중요시하며, 관련 법령을 준수하기 위해 다음과 같이 개인정보처리방침을 안내드립니다.</p>
 <dl class="space-y-3">
 <div>
 <dt class="font-label-md text-label-md text-primary mb-1">1. 업체명</dt>
@@ -672,7 +675,7 @@
 </dl>
 </div>
 <div class="px-6 md:px-8 py-4 border-t border-outline-variant/30 flex justify-end">
-<button type="button" data-modal-close="privacy-modal" class="px-6 py-3 bg-primary text-on-primary font-label-md text-label-md tracking-wider hover:opacity-90 transition-opacity duration-300">닫기</button>
+<button type="button" data-modal-close="privacy-modal" class="px-6 py-3 bg-primary text-on-primary rounded-full font-label-bold text-label-bold tracking-wider hover:opacity-90 transition-opacity duration-300">닫기</button>
 </div>
 </div>
 </div>
@@ -680,7 +683,7 @@
 <!-- Terms of Service Modal -->
 <div id="terms-modal" class="hidden fixed inset-0 z-[100] items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="terms-modal-title">
 <div class="absolute inset-0 bg-on-surface/60 backdrop-blur-sm" data-modal-close="terms-modal"></div>
-<div class="relative bg-surface w-full max-w-2xl max-h-[85vh] flex flex-col shadow-2xl border border-outline-variant/30">
+<div class="relative bg-surface w-full max-w-2xl max-h-[85vh] flex flex-col shadow-2xl rounded-[32px] border border-outline-variant/30 overflow-hidden">
 <div class="flex items-center justify-between px-6 md:px-8 py-5 border-b border-outline-variant/30">
 <h3 id="terms-modal-title" class="font-headline-md text-headline-md text-primary">이용약관</h3>
 <button type="button" data-modal-close="terms-modal" class="text-on-surface-variant hover:text-primary transition-colors" aria-label="닫기">
@@ -688,7 +691,7 @@
 </button>
 </div>
 <div class="overflow-y-auto px-6 md:px-8 py-6 space-y-4 font-body-md text-body-md text-on-surface">
-<p>본 약관은 <span class="font-bold" style="color:#FF6B00;">디디짐</span>(이하 "회사")이 제공하는 퍼스널트레이닝 서비스 이용에 관한 기본적인 사항을 규정합니다.</p>
+<p>본 약관은 <span class="text-primary-container font-bold">디디짐</span>(이하 "회사")이 제공하는 퍼스널트레이닝 서비스 이용에 관한 기본적인 사항을 규정합니다.</p>
 <dl class="space-y-3">
 <div>
 <dt class="font-label-md text-label-md text-primary mb-1">제1조 (업체명)</dt>
@@ -717,7 +720,7 @@
 </dl>
 </div>
 <div class="px-6 md:px-8 py-4 border-t border-outline-variant/30 flex justify-end">
-<button type="button" data-modal-close="terms-modal" class="px-6 py-3 bg-primary text-on-primary font-label-md text-label-md tracking-wider hover:opacity-90 transition-opacity duration-300">닫기</button>
+<button type="button" data-modal-close="terms-modal" class="px-6 py-3 bg-primary text-on-primary rounded-full font-label-bold text-label-bold tracking-wider hover:opacity-90 transition-opacity duration-300">닫기</button>
 </div>
 </div>
 </div>
@@ -755,6 +758,75 @@
             if (m && !m.classList.contains('hidden')) closeModal(id);
         });
     });
+})();
+</script>
+<!-- Scroll reveal + interactive ring hover -->
+<script>
+(function () {
+    var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('opacity-100', 'translate-y-0');
+                entry.target.classList.remove('opacity-0', 'translate-y-10');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('main > section').forEach(function (section) {
+        section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+        observer.observe(section);
+    });
+
+    document.querySelectorAll('.progress-ring-circle').forEach(function (circle) {
+        var parent = circle.parentElement;
+        parent.addEventListener('mouseenter', function () { circle.style.strokeWidth = '12'; });
+        parent.addEventListener('mouseleave', function () { circle.style.strokeWidth = '10'; });
+    });
+})();
+</script>
+<!-- Motion-reactive hero orbs: pointer + scroll + device tilt, with gentle auto-drift -->
+<script>
+(function () {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var orbs = document.querySelectorAll('.parallax-orb');
+    var hero = document.querySelector('.vitality-gradient');
+    if (!orbs.length || !hero) return;
+
+    var px = 0, py = 0;   // normalized input (-1..1)
+    var cx = 0, cy = 0;   // smoothed value
+    var scrollY = 0;
+
+    window.addEventListener('pointermove', function (e) {
+        px = (e.clientX / window.innerWidth) - 0.5;
+        py = (e.clientY / window.innerHeight) - 0.5;
+    }, { passive: true });
+
+    window.addEventListener('deviceorientation', function (e) {
+        if (e.gamma == null || e.beta == null) return;
+        px = Math.max(-1, Math.min(1, e.gamma / 40));        // left-right tilt
+        py = Math.max(-1, Math.min(1, (e.beta - 45) / 40));  // front-back tilt
+    }, true);
+
+    window.addEventListener('scroll', function () {
+        scrollY = window.scrollY || window.pageYOffset || 0;
+    }, { passive: true });
+
+    function frame(t) {
+        cx += (px - cx) * 0.06;
+        cy += (py - cy) * 0.06;
+        for (var i = 0; i < orbs.length; i++) {
+            var o = orbs[i];
+            var d = parseFloat(o.getAttribute('data-depth')) || 20;
+            var driftX = Math.cos(t / 4200 + i * 1.7) * (d * 0.35);
+            var driftY = Math.sin(t / 3600 + i * 2.1) * (d * 0.35);
+            var tx = cx * d * 1.6 + driftX;
+            var ty = cy * d * 1.6 + driftY + scrollY * (d * 0.012);
+            o.style.transform = 'translate3d(' + tx.toFixed(1) + 'px,' + ty.toFixed(1) + 'px,0)';
+        }
+        requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
 })();
 </script>
 <!-- Formspree Ajax SDK -->
