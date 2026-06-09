@@ -5,7 +5,7 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 
 <!-- Security: prefer HTTP headers when the host allows; meta is best-effort -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://www.clarity.ms https://*.clarity.ms https://www.googletagmanager.com https://www.google-analytics.com https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com https://www.clarity.ms https://*.clarity.ms https://c.bing.com; connect-src 'self' https://formspree.io https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://*.clarity.ms https://c.bing.com; form-action https://formspree.io; frame-ancestors 'none'; base-uri 'self'; upgrade-insecure-requests"/>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://www.clarity.ms https://*.clarity.ms https://www.googletagmanager.com https://www.google-analytics.com https://unpkg.com https://oapi.map.naver.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob: https://www.google-analytics.com https://www.googletagmanager.com https://www.clarity.ms https://*.clarity.ms https://c.bing.com https://*.pstatic.net https://*.map.naver.com https://*.map.naver.net https://oapi.map.naver.com; connect-src 'self' https://formspree.io https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://*.clarity.ms https://c.bing.com https://oapi.map.naver.com https://*.map.naver.com https://*.map.naver.net https://*.pstatic.net; form-action https://formspree.io; frame-ancestors 'none'; base-uri 'self'; upgrade-insecure-requests"/>
 <meta http-equiv="X-Content-Type-Options" content="nosniff"/>
 <meta name="referrer" content="strict-origin-when-cross-origin"/>
 <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()"/>
@@ -38,8 +38,8 @@
 <!-- GEO / Local -->
 <meta name="geo.region" content="KR-GG"/>
 <meta name="geo.placename" content="의정부시"/>
-<meta name="geo.position" content="37.7378;127.0474"/>
-<meta name="ICBM" content="37.7378, 127.0474"/>
+<meta name="geo.position" content="37.74044466113;127.035134903668"/>
+<meta name="ICBM" content="37.74044466113, 127.035134903668"/>
 
 <!-- Structured Data: LocalBusiness -->
 <script type="application/ld+json">
@@ -64,8 +64,8 @@
   },
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": 37.7378,
-    "longitude": 127.0474
+    "latitude": 37.74044466113,
+    "longitude": 127.035134903668
   },
   "openingHoursSpecification": [
     {
@@ -295,6 +295,7 @@
 <a class="text-primary border-b-2 border-primary pb-1 font-label-bold text-label-bold transition-all duration-300" href="#why-premium">프리미엄의 이유</a>
 <a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-all duration-300" href="#trainers">트레이너</a>
 <a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-all duration-300" href="#reviews">후기</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-all duration-300" href="#location">오시는 길</a>
 <a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-all duration-300" href="#contact">상담 신청</a>
 </div>
 <a href="#contact" class="hidden md:inline-flex items-center justify-center bg-primary-container text-on-primary hover:opacity-90 active:scale-95 transition-all duration-300 rounded-full px-8 py-3 font-label-bold text-label-bold">
@@ -310,6 +311,7 @@
 <a class="text-primary font-label-bold text-label-bold py-2" href="#why-premium">프리미엄의 이유</a>
 <a class="text-on-surface-variant font-label-md text-label-md py-2 hover:text-primary transition-colors duration-300" href="#trainers">트레이너</a>
 <a class="text-on-surface-variant font-label-md text-label-md py-2 hover:text-primary transition-colors duration-300" href="#reviews">후기</a>
+<a class="text-on-surface-variant font-label-md text-label-md py-2 hover:text-primary transition-colors duration-300" href="#location">오시는 길</a>
 <a class="text-on-surface-variant font-label-md text-label-md py-2 hover:text-primary transition-colors duration-300" href="#contact">상담 신청</a>
 <a href="#contact" class="mt-2 inline-flex items-center justify-center bg-primary-container text-on-primary rounded-full px-6 py-3 font-label-bold text-label-bold hover:opacity-90 transition-all duration-300">
             지금 가입하기
@@ -555,6 +557,20 @@
 <div class="absolute bottom-0 left-0 w-64 h-64 bg-on-primary-container/20 rounded-full blur-3xl -ml-32 -mb-32"></div>
 </div>
 </section>
+<!-- Directions / Map -->
+<section class="py-section-gap px-container-padding-mobile md:px-container-padding-desktop max-w-7xl mx-auto" id="location">
+<div class="text-center mb-8 md:mb-12">
+<span class="font-label-bold text-label-bold tracking-[0.2em] text-primary mb-4 block uppercase">오시는 길</span>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg">디디짐 위치</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-3 flex items-center justify-center gap-1.5">
+<span class="material-symbols-outlined text-lg text-primary">location_on</span>
+                    경기도 의정부시 의정로84, 대성빌딩 지하1층
+                </p>
+</div>
+<div class="glass-card rounded-[32px] p-3 sm:p-4 overflow-hidden">
+<div id="map" class="w-full h-[320px] sm:h-[460px] rounded-[24px] overflow-hidden bg-surface-container"></div>
+</div>
+</section>
 </main>
 <!-- Footer -->
 <footer class="w-full py-section-gap px-container-padding-mobile md:px-container-padding-desktop border-t border-outline-variant/30">
@@ -784,4 +800,16 @@
   formspree('initForm', { formElement: '#contact-form', formId: 'xwvznzez' });
 </script>
 <script src="https://unpkg.com/@formspree/ajax@1" defer crossorigin="anonymous"></script>
+<!-- Naver Map -->
+<script src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=lajkpeiv5b"></script>
+<script>
+(function () {
+    if (typeof naver === 'undefined' || !naver.maps) return;
+    var el = document.getElementById('map');
+    if (!el) return;
+    var pos = new naver.maps.LatLng(37.74044466113, 127.035134903668);
+    var map = new naver.maps.Map('map', { center: pos, zoom: 16 });
+    new naver.maps.Marker({ position: pos, map: map });
+})();
+</script>
 </body></html>
