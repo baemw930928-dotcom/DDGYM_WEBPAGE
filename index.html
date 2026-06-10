@@ -3,12 +3,7 @@
 <html class="light scroll-smooth" lang="ko"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-
-<!-- Security: prefer HTTP headers when the host allows; meta is best-effort -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.clarity.ms https://*.clarity.ms https://www.googletagmanager.com https://www.google-analytics.com https://unpkg.com https://oapi.map.naver.com https://*.pstatic.net https://*.map.naver.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob: https://www.google-analytics.com https://www.googletagmanager.com https://www.clarity.ms https://*.clarity.ms https://c.bing.com https://*.pstatic.net https://*.map.naver.com https://*.map.naver.net https://oapi.map.naver.com; connect-src 'self' https://formspree.io https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://*.clarity.ms https://c.bing.com https://oapi.map.naver.com https://*.map.naver.com https://*.map.naver.net https://*.pstatic.net https://*.navercorp.com; form-action https://formspree.io; frame-ancestors 'none'; base-uri 'self'; upgrade-insecure-requests"/>
-<meta http-equiv="X-Content-Type-Options" content="nosniff"/>
-<meta name="referrer" content="strict-origin-when-cross-origin"/>
-<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()"/>
+<!-- Security headers (CSP, HSTS, X-Frame-Options, etc.) are served as HTTP response headers via /_headers on Cloudflare Pages, not meta tags. -->
 
 <!-- Primary SEO -->
 <title>디디짐 | 의정부 퍼스널 트레이닝센터</title>
@@ -161,41 +156,6 @@
 <link rel="stylesheet" href="/styles.css"/>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet" crossorigin="anonymous"/>
 <!-- Analytics (GA4 + Microsoft Clarity): deferred to first interaction or idle to keep initial render fast -->
-<script>
-(function () {
-    var GA_ID = 'G-G0WSZX6906';
-    var CLARITY_ID = 'wwjrqeno23';
-    var started = false;
-    function loadAnalytics() {
-        if (started) return;
-        started = true;
-        var s = document.createElement('script');
-        s.async = true;
-        s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
-        document.head.appendChild(s);
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        window.gtag = gtag;
-        gtag('js', new Date());
-        gtag('config', GA_ID);
-        (function (c, l, a, r, i, t, y) {
-            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
-            t = l.createElement(r); t.async = 1; t.src = 'https://www.clarity.ms/tag/' + i;
-            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
-        })(window, document, 'clarity', 'script', CLARITY_ID);
-    }
-    var events = ['pointerdown', 'keydown', 'touchstart', 'scroll'];
-    function onFirst() {
-        events.forEach(function (e) { window.removeEventListener(e, onFirst, { passive: true }); });
-        loadAnalytics();
-    }
-    events.forEach(function (e) { window.addEventListener(e, onFirst, { passive: true }); });
-    window.addEventListener('load', function () {
-        if ('requestIdleCallback' in window) requestIdleCallback(loadAnalytics, { timeout: 5000 });
-        else setTimeout(loadAnalytics, 4000);
-    });
-})();
-</script>
 </head>
 <body class="bg-background text-on-surface antialiased min-h-screen flex flex-col selection:bg-primary-fixed selection:text-on-primary-fixed overflow-x-hidden">
 <!-- Top Navigation -->
@@ -232,38 +192,6 @@
 </div>
 </div>
 </nav>
-<script>
-(function () {
-    const toggle = document.getElementById('mobile-menu-toggle');
-    const menu = document.getElementById('mobile-menu');
-    const icon = document.getElementById('mobile-menu-icon');
-    if (!toggle || !menu || !icon) return;
-
-    const MENU_D = 'M120-240v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z';
-    const CLOSE_D = 'm249-207-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z';
-    function setIcon(d) {
-        const p = icon.querySelector('path');
-        if (p) p.setAttribute('d', d);
-    }
-    function closeMenu() {
-        menu.classList.add('hidden');
-        toggle.setAttribute('aria-expanded', 'false');
-        setIcon(MENU_D);
-    }
-    function openMenu() {
-        menu.classList.remove('hidden');
-        toggle.setAttribute('aria-expanded', 'true');
-        setIcon(CLOSE_D);
-    }
-    toggle.addEventListener('click', function () {
-        if (menu.classList.contains('hidden')) openMenu();
-        else closeMenu();
-    });
-    menu.querySelectorAll('a').forEach(function (link) {
-        link.addEventListener('click', closeMenu);
-    });
-})();
-</script>
 <main id="top" class="flex-grow pt-20">
 <!-- Hero Section -->
 <section class="vitality-gradient min-h-[88vh] flex flex-col justify-center items-center text-center px-container-padding-mobile md:px-container-padding-desktop py-16 sm:py-24 relative overflow-hidden">
@@ -456,19 +384,21 @@
 </div>
 <form id="contact-form" action="https://formspree.io/f/xwvznzez" method="POST" class="glass-card rounded-[32px] p-8 md:p-10 flex flex-col gap-6" novalidate>
 <input type="hidden" name="_subject" value="디디짐 홈페이지 비즈니스 문의"/>
+<!-- Honeypot: bots fill this hidden field; Formspree discards such submissions -->
+<input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" class="hidden"/>
 <div class="flex flex-col gap-2">
 <label for="name" class="font-label-md text-label-md text-primary">이름 <span class="text-error">*</span></label>
-<input type="text" id="name" name="name" required data-fs-field autocomplete="name" class="px-4 py-3 bg-surface border border-outline-variant rounded-xl text-on-surface focus:outline-none focus:border-primary transition-colors"/>
+<input type="text" id="name" name="name" required data-fs-field autocomplete="name" data-clarity-mask="true" class="px-4 py-3 bg-surface border border-outline-variant rounded-xl text-on-surface focus:outline-none focus:border-primary transition-colors"/>
 <span data-fs-error="name" class="font-label-sm text-label-sm text-error"></span>
 </div>
 <div class="flex flex-col gap-2">
 <label for="phone" class="font-label-md text-label-md text-primary">연락처 <span class="text-error">*</span></label>
-<input type="tel" id="phone" name="phone" required data-fs-field autocomplete="tel" placeholder="010-0000-0000" class="px-4 py-3 bg-surface border border-outline-variant rounded-xl text-on-surface focus:outline-none focus:border-primary transition-colors"/>
+<input type="tel" id="phone" name="phone" required data-fs-field autocomplete="tel" placeholder="010-0000-0000" data-clarity-mask="true" class="px-4 py-3 bg-surface border border-outline-variant rounded-xl text-on-surface focus:outline-none focus:border-primary transition-colors"/>
 <span data-fs-error="phone" class="font-label-sm text-label-sm text-error"></span>
 </div>
 <div class="flex flex-col gap-2">
 <label for="message" class="font-label-md text-label-md text-primary">문의 내용 (선택)</label>
-<textarea id="message" name="message" rows="4" data-fs-field placeholder="비즈니스 문의 내용을 자세히 남겨주세요." class="px-4 py-3 bg-surface border border-outline-variant rounded-xl text-on-surface focus:outline-none focus:border-primary transition-colors resize-none"></textarea>
+<textarea id="message" name="message" rows="4" data-fs-field placeholder="비즈니스 문의 내용을 자세히 남겨주세요." data-clarity-mask="true" class="px-4 py-3 bg-surface border border-outline-variant rounded-xl text-on-surface focus:outline-none focus:border-primary transition-colors resize-none"></textarea>
 <span data-fs-error="message" class="font-label-sm text-label-sm text-error"></span>
 </div>
 <label class="flex items-start gap-3 cursor-pointer">
@@ -735,146 +665,10 @@
 </div>
 </div>
 
-<script>
-(function () {
-    function openModal(id) {
-        const modal = document.getElementById(id);
-        if (!modal) return;
-        modal.classList.remove('hidden');
-        modal.classList.add('flex');
-        document.body.style.overflow = 'hidden';
-    }
-    function closeModal(id) {
-        const modal = document.getElementById(id);
-        if (!modal) return;
-        modal.classList.add('hidden');
-        modal.classList.remove('flex');
-        document.body.style.overflow = '';
-    }
-    document.querySelectorAll('[data-modal-open]').forEach(function (btn) {
-        btn.addEventListener('click', function () {
-            openModal(btn.getAttribute('data-modal-open'));
-        });
-    });
-    document.querySelectorAll('[data-modal-close]').forEach(function (btn) {
-        btn.addEventListener('click', function () {
-            closeModal(btn.getAttribute('data-modal-close'));
-        });
-    });
-    document.addEventListener('keydown', function (e) {
-        if (e.key !== 'Escape') return;
-        ['privacy-modal', 'terms-modal'].forEach(function (id) {
-            const m = document.getElementById(id);
-            if (m && !m.classList.contains('hidden')) closeModal(id);
-        });
-    });
-})();
-</script>
 <!-- Scroll reveal + interactive ring hover -->
-<script>
-(function () {
-    var observer = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('opacity-100', 'translate-y-0');
-                entry.target.classList.remove('opacity-0', 'translate-y-10');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('main > section').forEach(function (section) {
-        section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
-        observer.observe(section);
-    });
-
-    document.querySelectorAll('.progress-ring-circle').forEach(function (circle) {
-        var parent = circle.parentElement;
-        parent.addEventListener('mouseenter', function () { circle.style.strokeWidth = '12'; });
-        parent.addEventListener('mouseleave', function () { circle.style.strokeWidth = '10'; });
-    });
-})();
-</script>
 <!-- Motion-reactive hero orbs: pointer + scroll + device tilt, with gentle auto-drift -->
-<script>
-(function () {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    var orbs = document.querySelectorAll('.parallax-orb');
-    var hero = document.querySelector('.vitality-gradient');
-    if (!orbs.length || !hero) return;
-
-    var px = 0, py = 0;   // normalized input (-1..1)
-    var cx = 0, cy = 0;   // smoothed value
-    var scrollY = 0;
-
-    window.addEventListener('pointermove', function (e) {
-        px = (e.clientX / window.innerWidth) - 0.5;
-        py = (e.clientY / window.innerHeight) - 0.5;
-    }, { passive: true });
-
-    window.addEventListener('deviceorientation', function (e) {
-        if (e.gamma == null || e.beta == null) return;
-        px = Math.max(-1, Math.min(1, e.gamma / 40));        // left-right tilt
-        py = Math.max(-1, Math.min(1, (e.beta - 45) / 40));  // front-back tilt
-    }, true);
-
-    window.addEventListener('scroll', function () {
-        scrollY = window.scrollY || window.pageYOffset || 0;
-    }, { passive: true });
-
-    function frame(t) {
-        cx += (px - cx) * 0.06;
-        cy += (py - cy) * 0.06;
-        for (var i = 0; i < orbs.length; i++) {
-            var o = orbs[i];
-            var d = parseFloat(o.getAttribute('data-depth')) || 20;
-            var driftX = Math.cos(t / 4200 + i * 1.7) * (d * 0.35);
-            var driftY = Math.sin(t / 3600 + i * 2.1) * (d * 0.35);
-            var tx = cx * d * 1.6 + driftX;
-            var ty = cy * d * 1.6 + driftY + scrollY * (d * 0.012);
-            o.style.transform = 'translate3d(' + tx.toFixed(1) + 'px,' + ty.toFixed(1) + 'px,0)';
-        }
-        requestAnimationFrame(frame);
-    }
-    requestAnimationFrame(frame);
-})();
-</script>
 <!-- Formspree Ajax SDK -->
-<script>
-  window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
-  formspree('initForm', { formElement: '#contact-form', formId: 'xwvznzez' });
-</script>
-<script src="https://unpkg.com/@formspree/ajax@1" defer crossorigin="anonymous"></script>
 <!-- Naver Map: loaded lazily only when the "오시는 길" section nears the viewport -->
-<script>
-(function () {
-    var target = document.getElementById('map');
-    if (!target) return;
-    var loaded = false;
-    function initMap() {
-        if (typeof naver === 'undefined' || !naver.maps) return;
-        var pos = new naver.maps.LatLng(37.74044466113, 127.035134903668);
-        var map = new naver.maps.Map('map', { center: pos, zoom: 16 });
-        new naver.maps.Marker({ position: pos, map: map });
-    }
-    function loadMap() {
-        if (loaded) return;
-        loaded = true;
-        var s = document.createElement('script');
-        s.src = 'https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=lajkpeiv5b';
-        s.onload = initMap;
-        document.head.appendChild(s);
-    }
-    if ('IntersectionObserver' in window) {
-        var io = new IntersectionObserver(function (entries) {
-            entries.forEach(function (e) {
-                if (e.isIntersecting) { io.disconnect(); loadMap(); }
-            });
-        }, { rootMargin: '300px' });
-        io.observe(target);
-    } else {
-        window.addEventListener('load', loadMap);
-    }
-})();
-</script>
+<script src="/app.js" defer></script>
+<script src="/vendor/formspree-ajax.js" defer></script>
 </body></html>

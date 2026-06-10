@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./index.html', './*.html'],
+  content: ['./index.html', './*.html', './app.js'],
   darkMode: 'class',
   // Classes toggled at runtime by inline scripts (kept even if not statically obvious).
   safelist: [
